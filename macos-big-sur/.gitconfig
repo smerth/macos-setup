@@ -1,0 +1,30 @@
+[filter "hawser"]
+	clean = git hawser clean %f
+	smudge = git hawser smudge %f
+	required = true
+[user]
+	name = smerth
+	email = stephen.merth@gmail.com
+	twitter = StephenMerth
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	required = true
+	process = git-lfs filter-process
+[push]
+	default = simple
+[color]
+	ui = true
+[core]
+	pager = less -r
+	autocrlf = input
+	ignorecase = false
+	
+[credential]
+	helper = osxkeychain
+
+[init]
+	defaultBranch = main
+
+
+

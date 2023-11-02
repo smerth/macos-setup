@@ -1,2 +1,3 @@
-# macbook-config
- previous macbook config files for reference
+# Macbook Config
+
+Previous macbook config files for reference.
