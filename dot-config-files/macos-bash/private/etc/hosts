@@ -1,0 +1,104 @@
+##
+
+# Host Database
+
+#
+
+# localhost is used to configure the loopback interface
+
+# when the system is booting. Do not change this entry.
+
+##
+
+# 127.0.0.1 localhost.localdomain localhost foo.example.com
+
+127.0.0.1 localhost
+
+255.255.255.255 broadcasthost
+
+#############
+
+# IPv6 loopback address
+
+#############
+
+::1 localhost
+
+#############
+
+# HTML5 Sites
+
+#############
+
+# 127.0.0.1 foundation-64-sandbox.com
+
+# 127.0.0.1 www.foundation-64-sandbox.com
+
+##############
+
+# Drupal 7
+
+##############
+
+127.0.0.1 bluefoxcorp.test
+127.0.0.1 www.bluefoxcorp.test
+
+127.0.0.1 pullanasia.test
+127.0.0.1 www.pullanasia.test
+
+127.0.0.1 tarams.test
+127.0.0.1 www.tarams.test
+
+127.0.0.1 podcast-dev.test
+127.0.0.1 www.podcast-dev.test
+127.0.0.1 podcast-stage.test
+127.0.0.1 www.podcast-stage.test
+
+127.0.0.1 article-dev.test
+127.0.0.1 www.article-dev.test
+127.0.0.1 article-stage.test
+127.0.0.1 www.article-stage.test
+
+127.0.0.1 hsk-words.test
+127.0.0.1 www.hsk-words.test
+
+##############
+
+# Drupal 8
+
+##############
+
+127.0.0.1 sound-of-bamboo.test
+127.0.0.1 www.sound-of-bamboo.test
+
+127.0.0.1 smerth-dev.test
+127.0.0.1 www.smerth-dev.test
+
+127.0.0.1 smerth-stage.test
+127.0.0.1 www.smerth-stage.test
+
+##########
+
+# PHP
+
+##########
+
+#############
+
+# SYMFONY
+
+#############
+
+#############
+
+# SILEX
+
+#############
+
+# Added by Docker Desktop
+
+# To allow the same kube context to work on the host and the container:
+
+127.0.0.1 kubernetes.docker.internal
+
+# End of section
