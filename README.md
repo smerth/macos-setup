@@ -322,8 +322,6 @@ gh config set editor "nano --wait"
 npm install -g lerna
 ```
 
-
-
 [Lerna Docs](https://lerna.js.org/docs/getting-started)
 
 
@@ -344,14 +342,13 @@ npm login --registry=https://npm.pkg.github.com --scope=@smerth
 
 
 
-USERNAME
+Will be prompted for:
 
-smerth
+USERNAME: smerth
 
-TOKEN
+PASSWORD: TOKEN
 
-PUBLIC-EMAIL-ADDRESS
-stephen.merth@gmail.com
+PUBLIC-EMAIL-ADDRESS: stephen.merth@gmail.com
 
 
 
@@ -368,19 +365,16 @@ this writes `.npmrc` to the user root directory of the laptop
 
 
 
+#### On a per repo basis
 
+You must add a `.npmrc` file to the the root of each repo with the a personal access token with permission to READ/WRITE PACKAGES.
 
+This directs npm to GitHub packages for packages prefixed `@smerth` and grants permision to download and publish.
 
-
-
-
-
-
-
-
-
-
-
+```bash
+//npm.pkg.github.com/:_authToken=TOKEN
+@smerth:registry=https://npm.pkg.github.com
+```
 
 
 
@@ -573,5 +567,4 @@ alias typora="/Applications/Typora.app/Contents/MacOS/Typora"
 in your `.bash_profile` or other configuration file.
 
 Then if you run `typora xxx.md` and `xxx.md` does not exists, Typora will pop up a dialog to ask you whether to create target file or cancel the operation.
-
 
