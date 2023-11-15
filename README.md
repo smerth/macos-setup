@@ -519,6 +519,7 @@ follow the install proceedure for 0h-my-zsh https://github.com/zsh-users/zsh-aut
 - [x] Prettier
 - [x] Vscode icons
 - [x] live server
+- [x] vsc-nvm
 
 Consider:
 
