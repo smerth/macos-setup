@@ -2,9 +2,7 @@
 
 Setup a new Mac for web development.
 
-> ***N.B. If you install  Homebrew then install and configure Warp first, you can open this README in Warp and click on bash blocks within the doc to execute bash scripts in the Warp terminal.***  
-
-
+> **_N.B. If you install Homebrew then install and configure Warp first, you can open this README in Warp and click on bash blocks within the doc to execute bash scripts in the Warp terminal._**
 
 ## iCloud
 
@@ -13,8 +11,6 @@ If you are using a Mac, your most important data (contacts, messages, calendars,
 - [x] log-in to iCloud
 - [x] turn on synching for all the data that is relevant to you
 - [x] open all apple applications, click through introductory windows, and make sure they are synced with iCloud
-
-
 
 ## MacOS preferences
 
@@ -33,21 +29,15 @@ Get the Finder, Desktop and behaviour setup the way you like.
   - [x] BL - screen saver
   - [x] BR - desktop
 
-
-
 ## Install fonts
 
 [Anonymous Pro Font](https://www.marksimonson.com/fonts/view/anonymous-pro)
 
 - [ ] Download font, open Font Book and install all the fonts.
 
-
-
 If you care about icons in the terminal consider: [Nerd Fonts](https://www.nerdfonts.com/font-downloads)
 
 https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.2/AnonymousPro.zip
-
-
 
 ## Install apps from app store
 
@@ -70,13 +60,9 @@ Download any apps you need from the App Store. Click on your account in the stor
 - [ ] Garage Band
 - [ ] Apple Developer
 
-
-
 ## Log in to Github
 
 Now that 1Password and Authy are installed, log in to GitHub as this will be usefull throughout.
-
-
 
 ## Install Homebrew
 
@@ -86,11 +72,7 @@ Now that 1Password and Authy are installed, log in to GitHub as this will be use
 - [x] Run the terminal commands to finish the install
 - [x] View `.zprofile ` to check it was created
 
-
-
 ## NodeJS
-
-
 
 ### Nvm
 
@@ -98,8 +80,6 @@ Now that 1Password and Authy are installed, log in to GitHub as this will be use
 
 - [x] install using the script on the nvm GitHub page
 - [x] add snippet to `.zshrc` to auto-load the version of node specified in `.nvmrc`
-
-
 
 ### Node
 
@@ -117,8 +97,6 @@ Now that 1Password and Authy are installed, log in to GitHub as this will be use
 ```bash
 npm install --global yarn
 ```
-
-
 
 ### Configure NPM
 
@@ -149,8 +127,6 @@ always-auth=true
 scripts-prepend-node-path=true
 ```
 
-
-
 ### Test the Node setup
 
 - [ ] create a test folder
@@ -159,13 +135,9 @@ scripts-prepend-node-path=true
 - [ ] install a package from you GitHub account
 - [ ] install a private package from your GitHub account
 
-
-
 ## Python
 
 https://www.python.org/
-
-
 
 ### Anaconda
 
@@ -178,8 +150,6 @@ https://www.python.org/
 https://learning.anaconda.cloud/path/intro-to-python
 
 > Check your dotfiles. Anaconda installs a `.bash_profile` with a script to initialize conda. To keep the dotfiles clean and because you are using zsh instead of bash, copy the block to the `.zprofile`. Check the terminal prompt which should show the current python environment (base by default.)
-
-
 
 ### Set up Python Environments
 
@@ -207,23 +177,15 @@ To deactivate an active environment
 conda deactivate
 ```
 
-
-
 ### Uninstall Anaconda
 
 [Remove environments](https://www.freecodecamp.org/news/how-to-delete-an-environment-in-conda/)
 
 [Uninstall Anaconda](https://docs.anaconda.com/free/anaconda/install/uninstall/)
 
-
-
-
-
 ## Install Git and GitHub
 
 [Install git, GitHub CLI and GitHub Git Credential Manager](https://docs.github.com/en/get-started/getting-started-with-git/caching-your-github-credentials-in-git)
-
-
 
 ### Install Git
 
@@ -232,8 +194,6 @@ conda deactivate
 ```bash
 brew install git
 ```
-
-
 
 ### Install Git Credential Manager
 
@@ -256,8 +216,6 @@ Once you've authenticated successfully, your credentials are stored in the macOS
 
 For more information or to report issues with GCM, see the official GCM docs at "[Git Credential Manager](https://github.com/GitCredentialManager/git-credential-manager)."
 
-
-
 ### Configure git
 
 GitHub Credential Manager should configure git however if further config is necessary use the following pattern:
@@ -267,8 +225,6 @@ git config --global user.name "Your Name Here"
 ```
 
 Global level configuration is user-specific, meaning it is applied to an operating system user. Global configuration values are stored in a file that is located in a user's home directory. `~ /.gitconfig` on unix systems
-
-
 
 ### Install GitHub CLI
 
@@ -300,8 +256,6 @@ Configure GitHub CLI
 gh config set editor "nano --wait"
 ```
 
-
-
 ### Install GitHub Desktop
 
 [GitHub Desktop](https://desktop.github.com/)
@@ -310,21 +264,15 @@ gh config set editor "nano --wait"
 - [x] create a new repo so you can set the default location for local repos to `smerth/developer/github`
 - [x] publish the new repo to GitHub
 
-
-
 ### Working with Private Repos and Packages
 
-
-
-[This](https://viewsource.io/publishing-and-installing-private-github-packages-using-yarn-and-lerna/) is a nice flow to setting up the laptop to work with private packages.  
+[This](https://viewsource.io/publishing-and-installing-private-github-packages-using-yarn-and-lerna/) is a nice flow to setting up the laptop to work with private packages.
 
 ```bash
 npm install -g lerna
 ```
 
 [Lerna Docs](https://lerna.js.org/docs/getting-started)
-
-
 
 [Authenticating to GitHub package registry](https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-npm-registry)
 
@@ -340,8 +288,6 @@ If GitHub Packages is not your default package registry for using npm and you wa
 npm login --registry=https://npm.pkg.github.com --scope=@smerth
 ```
 
-
-
 Will be prompted for:
 
 USERNAME: smerth
@@ -350,8 +296,6 @@ PASSWORD: TOKEN
 
 PUBLIC-EMAIL-ADDRESS: stephen.merth@gmail.com
 
-
-
 ```bash
 Username: smerth
 Password:
@@ -359,11 +303,7 @@ Email: (this IS public) (stephen.merth@gmail.com) stephen.merth@gmail.com
 Logged in as smerth to scope @smerth on https://npm.pkg.github.com/.
 ```
 
-
-
 this writes `.npmrc` to the user root directory of the laptop
-
-
 
 #### On a per repo basis
 
@@ -376,11 +316,15 @@ This directs npm to GitHub packages for packages prefixed `@smerth` and grants p
 @smerth:registry=https://npm.pkg.github.com
 ```
 
-
-
 ## Install casks (apps) with Homebrew
 
 In Homebrew parlance apps are called casks.
+
+We are going to programatically install a number of casks back to back. To prepare for that first run
+
+```bash
+brew tap homebrew/cask-versions
+```
 
 Clone your `macbook-setup` repo from GitHub
 
@@ -388,11 +332,11 @@ Clone your `macbook-setup` repo from GitHub
 git clone https://github.com/smerth/macbook-config.git
 ```
 
-cd into `install-brew-casks` and check the `cask-list` to make sure the apps you want to install and all there. 
+cd into `install-brew-casks` and check the `cask-list` to make sure the apps you want to install and all there.
 
-> Decide whether you are using iTerminal or Warp as you terminal replacement.  If you are using Warp you don't need oh-my-zsh
+> Decide whether you are using iTerminal or Warp as you terminal replacement. If you are using Warp you don't need oh-my-zsh
 
-***Check the `useful-casks` file for more into about various interesting casks.***
+**_Check the `useful-casks` file for more into about various interesting casks._**
 
 Run the install script
 
@@ -400,15 +344,14 @@ Run the install script
 zsh install-casks.zsh
 ```
 
-
+> IMPORTANT
+> Stick around during this process. You might need to to provide the login password for the computer during one or more installations.
 
 ## Configure apps installed with Homebrew
 
 Open each app and access preferences `cmd + ,` authorize and set preferences.
 
-***The following apps require some customization:***
-
-
+**_The following apps require some customization:_**
 
 ### Configure Warp (terminal)
 
@@ -416,13 +359,9 @@ Open each app and access preferences `cmd + ,` authorize and set preferences.
 - [x] Choose prompt
 - [x] Choose theme
 - [x] Choose the font and size
-- [x] 	use the previously installed anonymous font @ size 22
-
-
+- [x]     use the previously installed anonymice mono font @ size 22
 
 ### Configure iTerm2
-
-
 
 #### Add Oh My Zsh to iTerm2
 
@@ -437,21 +376,15 @@ Change theme to
 
 ```bash
 ZSH_THEME="af-magic"
-or 
+or
 ZSH_THEME="half-life"
 ```
 
-
-
 ### Further configuration
-
-
 
 **Set theme**
 
 - [x] @ `settings > profiles > general > theme` set to "Dark"
-
-
 
 **Install a color palette**
 
@@ -462,15 +395,10 @@ ZSH_THEME="half-life"
   - [x] doouble click file to load colours into presets
   - [x] go to `settings > profiles > colours` and choose the preset
 
-
-
-
 **Choose a font**
 
-- [x] `settings > profiles > text > font` set to "Anonymous Pro Font" or "AnonymicePro Font" for the  Nerd Font version with the icons
+- [x] `settings > profiles > text > font` set to "Anonymous Pro Font" or "AnonymicePro Font" for the Nerd Font version with the icons
 - [x] set font size to "22"
-
-
 
 **Install plugins**
 
@@ -482,30 +410,18 @@ follow the install proceedure for 0h-my-zsh https://github.com/robbyrussell/oh-m
 
 follow the install proceedure for 0h-my-zsh https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md#oh-my-zsh
 
-
-
 **Load new tabs and windows in previous location**
 
 - [x] @ `Preferences > Profiles > General > Working Directory` set to "Reuse previous sessions directory"
-
-
 
 **Use opt + arrow to move across tokens in a text string**
 
 - [x] @ `Preferences > Profiles > Keys > Key Mapping > Presets` set to "Natural Text Editing"
 
-
-
-
-
-
-
 ### Configure VSCode
 
 - [x] Turn on settings sync (syncs settings with Github account)
 - [x] Under turn on "linked tag editing" in: settings > linked editing
-
-
 
 #### Install extensions
 
@@ -532,8 +448,6 @@ Consider:
 - [ ] Debugger for chrome (and also does Firefox)
 - [ ] rest client
 
-
-
 ### Configure Firefox Developer
 
 - [x] Set as default browser
@@ -545,8 +459,6 @@ install extensions
 - [x] privacy badger
 - [x] ublock origin
 
-
-
 ### Typora
 
 You can use `open -a typora xxx.md` to open the markdown file `xxx.md` in Typora from a command line. If Typora is your default editor for `.md` files, when `open xxx.md` would be enough.
@@ -554,7 +466,7 @@ You can use `open -a typora xxx.md` to open the markdown file `xxx.md` in Typora
 You can also add
 
 ```
-alias typora="open -a typora"
+alias tp="open -a typora"
 ```
 
 in your `.bash_profile` or `.zprofile` other configuration file, then you would be able to simply type `typora xxx.md` instead.
@@ -568,4 +480,3 @@ alias typora="/Applications/Typora.app/Contents/MacOS/Typora"
 in your `.bash_profile` or other configuration file.
 
 Then if you run `typora xxx.md` and `xxx.md` does not exists, Typora will pop up a dialog to ask you whether to create target file or cancel the operation.
-
