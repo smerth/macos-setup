@@ -1,14 +1,11 @@
-alt-tab
-app-cleaner
+appcleaner
 discord
 firefox-developer-edition
 gimp
 google-chrome-dev
 google-drive
-google-earth-pro
 inkscape
 warp
-iterm2
 kap
 keepingyouawake
 keka
