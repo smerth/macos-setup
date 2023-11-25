@@ -4,6 +4,12 @@ Setup a new Mac for web development.
 
 > **_N.B. If you install Homebrew then install and configure Warp first, you can open this README in Warp and click on bash blocks within the doc to execute bash scripts in the Warp terminal._**
 
+## Install Developer Tools
+
+Since it takes a while start this now...
+
+Installing XCode is a painfully long wait and not necessary if all you need are the developer tools.  To initiate installation of just the tools without installing XCode just type `git + return` into terminal.  Since git is not installed you will be prompted to install developer tools (since git comes with that package.) 
+
 ## iCloud
 
 If you are using a Mac, your most important data (contacts, messages, calendars, music, etc) is synched to iCloud. Get that data onto your new Mac
@@ -52,10 +58,6 @@ Later we'll abondon Safari in favor of Firefox but for since 1Password and Authy
 I like [Anonymous Pro Font](https://www.marksimonson.com/fonts/view/anonymous-pro) for VSCode and Terminal.  But I want the version with lots if icons so download from [Nerd Fonts](https://www.nerdfonts.com/font-downloads)
 
 Double click to open the archive and click on a font to open FontBook. Install the font then drag the remaining variants of the font to FontBook to install them.
-
-## Install Developer Tools
-
-Installing XCode is a painfully long wait and not necessary if all you need are the developer tools.  To initiate installation of just the tools without installing XCode just type `git + return` into terminal.  Since git is not installed you will be prompted to install developer tools (since git comes with that package.) 
 
 ## Install Homebrew
 
