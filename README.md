@@ -29,20 +29,6 @@ Get the Finder, Desktop and behaviour setup the way you like.
   - [x] BL - screen saver
   - [x] BR - desktop
 
-## Install fonts
-
-I like [Anonymous Pro Font](https://www.marksimonson.com/fonts/view/anonymous-pro) for VSCode and Terminal.  But I want the version with lots if icons so download from [Nerd Fonts](https://www.nerdfonts.com/font-downloads)
-
-Double click to open the archive and click on a font to open FontBook. Install the font then drag the remaining variants of the font to FontBook to install them.
-
-## Install Git and Developer Tools
-
-There is no fast way to do this so start it now.  Download and install XCode.  Then open and install developer tools to get clang and git installed.
-
-## Clone this repo to `/`
-
-Clone this repo to `/` to make it easy to click on links and copy scripts.
-
 ## Install apps from app store.
 
 Download any apps you need from the App Store. Click on your account in the store to see a list of your previous purchases.
@@ -64,6 +50,16 @@ Download any apps you need from the App Store. Click on your account in the stor
 ## Log in to Github on Safari
 
 Later we'll abondon Safari in favor of Firefox but for since 1Password and Authy are installed, log in to GitHub as this will be useful throughout.
+
+## Install fonts
+
+I like [Anonymous Pro Font](https://www.marksimonson.com/fonts/view/anonymous-pro) for VSCode and Terminal.  But I want the version with lots if icons so download from [Nerd Fonts](https://www.nerdfonts.com/font-downloads)
+
+Double click to open the archive and click on a font to open FontBook. Install the font then drag the remaining variants of the font to FontBook to install them.
+
+## Install Developer Tools
+
+Installing XCode is a painfully long wait and not necessary if all you need are the developer tools.  To initiate installation of just the tools without installing XCode just type `git + return` into terminal.  Since git is not installed you will be prompted to install developer tools (since git comes with that package.) 
 
 ## Install Homebrew
 
@@ -105,6 +101,10 @@ Once you've authenticated successfully, your credentials are stored in the macOS
 - [x] check .`gitconfig` against reference version
 
 For more information or to report issues with GCM, see the official GCM docs at "[Git Credential Manager](https://github.com/GitCredentialManager/git-credential-manager)."
+
+## Clone this repo to computer root directory
+
+To check whether you have access to private repos Ccone this repo to `/` to make it easy to click on links and copy scripts.
 
 ### Configure git
 
