@@ -83,11 +83,7 @@ In Homebrew parlance apps are called casks.  We are going to programatically ins
 brew tap homebrew/cask-versions
 ```
 
-Check the `cask-list` in `install-brew-casks` to make sure the apps you want to install and all there.
-
-  > Decide whether you are using iTerminal or Warp as you terminal replacement. If you are using Warp you don't need oh-my-zsh
-
-**_Check the `useful-casks` file for more into about various interesting casks._**
+Check the `cask-list` in `install-brew-casks` to make sure the apps you want to install are all there.  Decide whether you are using iTerminal or Warp as you terminal replacement. If you are using Warp you don't need oh-my-zsh.  Check the `useful-casks` file for more into about various interesting casks.
 
 Run the install script
 
@@ -97,6 +93,7 @@ zsh install-casks.zsh
 
 > IMPORTANT
 > Stick around during this process. You might need to to provide the login password for the computer during one or more installations.
+> This will take some time...
 
 ## Configure apps installed with Homebrew
 
