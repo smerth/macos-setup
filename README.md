@@ -10,7 +10,10 @@ Later we'll abondon Safari in favor of Firefox but for now log in to GitHub as t
 
 ## Download the zip of this repo
 
-Unpack at `/` so you can use the files.
+Move from Downloads to `~/User/`
+```shell
+mv macos-setup ../macos-setup
+```
 
 ## Install Developer Tools
 
