@@ -12,7 +12,7 @@ Later we'll abondon Safari in favor of Firefox but for now log in to GitHub as t
 
 Move from Downloads to `~/User/`
 ```shell
-mv macos-setup ../macos-setup
+mv macos-setup-main ../macos-setup
 ```
 
 ## Install Developer Tools
