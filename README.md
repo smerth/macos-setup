@@ -77,15 +77,13 @@ Double click to open the archive and click on a font to open FontBook. Install t
 
 ## Install casks (apps) with Homebrew
 
-In Homebrew parlance apps are called casks.
-
-We are going to programatically install a number of casks back to back. To prepare for that first run
+In Homebrew parlance apps are called casks.  We are going to programatically install a number of casks back to back. To prepare for that first run
 
 ```bash
 brew tap homebrew/cask-versions
 ```
 
-Clone your `macbook-setup` repo from GitHub
+cd into the `macbook-setup` repo we downloaded earlier from GitHub
 
 ```bash
 git clone https://github.com/smerth/macbook-config.git
