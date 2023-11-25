@@ -4,6 +4,14 @@ Setup a new Mac for web development.
 
 > **_N.B. If you install Homebrew then install and configure Warp first, you can open this README in Warp and click on bash blocks within the doc to execute bash scripts in the Warp terminal._**
 
+## Log in to Github on Safari
+
+Later we'll abondon Safari in favor of Firefox but for now log in to GitHub as this will be useful throughout.
+
+## Download the zip of this repo
+
+Unpack at `/` so you can use the files.
+
 ## Install Developer Tools
 
 Since it takes a while start this now...
@@ -233,9 +241,7 @@ Then if you run `typora xxx.md` and `xxx.md` does not exists, Typora will pop up
 
 ## Install Git and GitHub
 
-### Log in to Github on Safari
 
-Later we'll abondon Safari in favor of Firefox but for since 1Password and Authy are installed, log in to GitHub as this will be useful throughout.
 
 [Install git, GitHub CLI and GitHub Git Credential Manager](https://docs.github.com/en/get-started/getting-started-with-git/caching-your-github-credentials-in-git)
 
