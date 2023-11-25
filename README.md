@@ -97,9 +97,9 @@ zsh install-casks.zsh
 
 ## Configure apps installed with Homebrew
 
-Open each app and access preferences `cmd + ,` authorize and set preferences.
+### Open each app you have installed
 
-**_The following apps require some customization:_**
+Now is a good time to open each app installed via the App store, dragged in from a legacy apps folder or installed by Homebrew.  Open each app and access preferences with `cmd + ,`  Authorize each app if necessary and set preferences.
 
 ### Configure Warp (terminal)
 
@@ -111,16 +111,13 @@ Open each app and access preferences `cmd + ,` authorize and set preferences.
 
 ### Configure iTerm2
 
-#### Add Oh My Zsh to iTerm2
-
-Install [Oh My Zsh](https://ohmyz.sh/)
+Oh-My-Zsh is the quickest way to get a nice terminal experiance using iTerm2.  Install [Oh My Zsh](https://ohmyz.sh/)
 
 ```bash
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ```
 
-Change theme to
-@ `.zshrc`
+Change theme in the `.zshrc` file.
 
 ```bash
 ZSH_THEME="af-magic"
@@ -128,7 +125,7 @@ or
 ZSH_THEME="half-life"
 ```
 
-### Further configuration
+#### Further configuration for iTerm2
 
 **Set theme**
 
