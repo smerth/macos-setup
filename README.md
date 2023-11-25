@@ -42,10 +42,6 @@ Download any apps you need from the App Store. Click on your account in the stor
 - [x] Magnet
 - [x] Transmit
   - [x] Download from Panic (not the app store)
-- [ ] Pages
-- [ ] Keynote
-- [ ] Garage Band
-- [ ] Apple Developer
 
 ## Log in to Github on Safari
 
