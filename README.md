@@ -83,15 +83,9 @@ In Homebrew parlance apps are called casks.  We are going to programatically ins
 brew tap homebrew/cask-versions
 ```
 
-cd into the `macbook-setup` repo we downloaded earlier from GitHub
+Check the `cask-list` in `install-brew-casks` to make sure the apps you want to install and all there.
 
-```bash
-git clone https://github.com/smerth/macbook-config.git
-```
-
-cd into `install-brew-casks` and check the `cask-list` to make sure the apps you want to install and all there.
-
-> Decide whether you are using iTerminal or Warp as you terminal replacement. If you are using Warp you don't need oh-my-zsh
+  > Decide whether you are using iTerminal or Warp as you terminal replacement. If you are using Warp you don't need oh-my-zsh
 
 **_Check the `useful-casks` file for more into about various interesting casks._**
 
