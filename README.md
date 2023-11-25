@@ -49,10 +49,6 @@ Download any apps you need from the App Store. Click on your account in the stor
 - [x] Transmit
   - [x] Download from Panic (not the app store)
 
-## Log in to Github on Safari
-
-Later we'll abondon Safari in favor of Firefox but for since 1Password and Authy are installed, log in to GitHub as this will be useful throughout.
-
 ## Install fonts
 
 I like [Anonymous Pro Font](https://www.marksimonson.com/fonts/view/anonymous-pro) for VSCode and Terminal.  But I want the version with lots if icons so download from [Nerd Fonts](https://www.nerdfonts.com/font-downloads)
@@ -67,142 +63,6 @@ Double click to open the archive and click on a font to open FontBook. Install t
 - [x] Run the terminal commands to finish the install
 - [x] View `.zprofile ` to check it was created
 
-## Install Git and GitHub
-
-[Install git, GitHub CLI and GitHub Git Credential Manager](https://docs.github.com/en/get-started/getting-started-with-git/caching-your-github-credentials-in-git)
-
-### Install Git
-
-- [x] intall git using Homebrew:
-
-```bash
-brew install git
-```
-
-### Install Git Credential Manager
-
-[Git Credential Manager](https://github.com/GitCredentialManager/git-credential-manager) (GCM) is another way to store your credentials securely and connect to GitHub over HTTPS. With GCM, you don't have to manually [create and store a personal access token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token), as GCM manages authentication on your behalf, including 2FA (two-factor authentication).
-
-- [x] Install GCM using Homebrew:
-
-```shell
-brew install --cask git-credential-manager
-```
-
-For MacOS, you don't need to run `git config` because GCM automatically configures Git for you.
-
-The next time you clone an HTTPS URL that requires authentication, Git will prompt you to log in using a browser window. You may first be asked to authorize an OAuth app. If your account or organization requires [two-factor auth](https://docs.github.com/en/authentication/securing-your-account-with-two-factor-authentication-2fa), you'll also need to complete the 2FA challenge.
-
-Once you've authenticated successfully, your credentials are stored in the macOS keychain and will be used every time you clone an HTTPS URL. Git will not require you to type your credentials in the command line again unless you change your credentials.
-
-- [x] clone a private repo to initiate authentication
-- [x] check .`gitconfig` against reference version
-
-For more information or to report issues with GCM, see the official GCM docs at "[Git Credential Manager](https://github.com/GitCredentialManager/git-credential-manager)."
-
-## Clone this repo to computer root directory
-
-To check whether you have access to private repos Ccone this repo to `/` to make it easy to click on links and copy scripts.
-
-### Configure git
-
-GitHub Credential Manager should configure git however if further config is necessary use the following pattern:
-
-```bash
-git config --global user.name "Your Name Here"
-```
-
-Global level configuration is user-specific, meaning it is applied to an operating system user. Global configuration values are stored in a file that is located in a user's home directory. `~ /.gitconfig` on unix systems
-
-### Install GitHub CLI
-
-[GitHub CLI](https://cli.github.com/)
-
-[GitHub CLI tutorial](https://www.youtube.com/watch?v=BRAG1Kj4-Ss)
-
-- [x] Install GitHub CLI
-
-```bash
-brew install gh
-```
-
-- [x] Authenticate GitHub CLI
-
-```bash
-gh auth login
-```
-
-Choose to authenticate with a web browser...
-
-Choose https...
-
-Configure GitHub CLI
-
-- [x] Set editor to nano so you don't have to leave the terminal
-
-```bash
-gh config set editor "nano --wait"
-```
-
-### Install GitHub Desktop
-
-[GitHub Desktop](https://desktop.github.com/)
-
-- [x] install GitHub Desktop
-- [x] create a new repo so you can set the default location for local repos to `smerth/developer/github`
-- [x] publish the new repo to GitHub
-
-### Working with Private Repos and Packages
-
-[This](https://viewsource.io/publishing-and-installing-private-github-packages-using-yarn-and-lerna/) is a nice flow to setting up the laptop to work with private packages.
-
-```bash
-npm install -g lerna
-```
-
-[Lerna Docs](https://lerna.js.org/docs/getting-started)
-
-[Authenticating to GitHub package registry](https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-npm-registry)
-
-## Authenticate by logging in
-
-To authenticate by logging in to npm, use the `npm login` command, replacing USERNAME with your GitHub username, TOKEN with your personal access token (classic), and PUBLIC-EMAIL-ADDRESS with your email address.
-
-If you are using npm CLI version 9 or greater and are logging in or out of a private registry using the command line, you should use the `--auth-type=legacy` option to read in your authentication details from prompts instead of using the default login flow through a browser. For more information, see [`npm-login`](https://docs.npmjs.com/cli/v9/commands/npm-login).
-
-If GitHub Packages is not your default package registry for using npm and you want to use the `npm audit` command, we recommend you use the `--scope` flag with the namespace that hosts the package (the personal account or organization to which the package is scoped) when you authenticate to GitHub Packages.
-
-```bash
-npm login --registry=https://npm.pkg.github.com --scope=@smerth
-```
-
-Will be prompted for:
-
-USERNAME: smerth
-
-PASSWORD: TOKEN
-
-PUBLIC-EMAIL-ADDRESS: stephen.merth@gmail.com
-
-```bash
-Username: smerth
-Password:
-Email: (this IS public) (stephen.merth@gmail.com) stephen.merth@gmail.com
-Logged in as smerth to scope @smerth on https://npm.pkg.github.com/.
-```
-
-this writes `.npmrc` to the user root directory of the laptop
-
-#### On a per repo basis
-
-You must add a `.npmrc` file to the the root of each repo with the a personal access token with permission to READ/WRITE PACKAGES.
-
-This directs npm to GitHub packages for packages prefixed `@smerth` and grants permision to download and publish.
-
-```bash
-//npm.pkg.github.com/:_authToken=TOKEN
-@smerth:registry=https://npm.pkg.github.com
-```
 
 ## Install casks (apps) with Homebrew
 
@@ -369,6 +229,148 @@ in your `.bash_profile` or other configuration file.
 
 Then if you run `typora xxx.md` and `xxx.md` does not exists, Typora will pop up a dialog to ask you whether to create target file or cancel the operation.
 
+
+
+## Install Git and GitHub
+
+### Log in to Github on Safari
+
+Later we'll abondon Safari in favor of Firefox but for since 1Password and Authy are installed, log in to GitHub as this will be useful throughout.
+
+[Install git, GitHub CLI and GitHub Git Credential Manager](https://docs.github.com/en/get-started/getting-started-with-git/caching-your-github-credentials-in-git)
+
+### Install Git
+
+- [x] intall git using Homebrew:
+
+```bash
+brew install git
+```
+
+### Install Git Credential Manager
+
+[Git Credential Manager](https://github.com/GitCredentialManager/git-credential-manager) (GCM) is another way to store your credentials securely and connect to GitHub over HTTPS. With GCM, you don't have to manually [create and store a personal access token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token), as GCM manages authentication on your behalf, including 2FA (two-factor authentication).
+
+- [x] Install GCM using Homebrew:
+
+```shell
+brew install --cask git-credential-manager
+```
+
+For MacOS, you don't need to run `git config` because GCM automatically configures Git for you.
+
+The next time you clone an HTTPS URL that requires authentication, Git will prompt you to log in using a browser window. You may first be asked to authorize an OAuth app. If your account or organization requires [two-factor auth](https://docs.github.com/en/authentication/securing-your-account-with-two-factor-authentication-2fa), you'll also need to complete the 2FA challenge.
+
+Once you've authenticated successfully, your credentials are stored in the macOS keychain and will be used every time you clone an HTTPS URL. Git will not require you to type your credentials in the command line again unless you change your credentials.
+
+- [x] clone a private repo to initiate authentication
+- [x] check .`gitconfig` against reference version
+
+For more information or to report issues with GCM, see the official GCM docs at "[Git Credential Manager](https://github.com/GitCredentialManager/git-credential-manager)."
+
+## Clone this repo to computer root directory
+
+To check whether you have access to private repos Ccone this repo to `/` to make it easy to click on links and copy scripts.
+
+### Configure git
+
+GitHub Credential Manager should configure git however if further config is necessary use the following pattern:
+
+```bash
+git config --global user.name "Your Name Here"
+```
+
+Global level configuration is user-specific, meaning it is applied to an operating system user. Global configuration values are stored in a file that is located in a user's home directory. `~ /.gitconfig` on unix systems
+
+### Install GitHub CLI
+
+[GitHub CLI](https://cli.github.com/)
+
+[GitHub CLI tutorial](https://www.youtube.com/watch?v=BRAG1Kj4-Ss)
+
+- [x] Install GitHub CLI
+
+```bash
+brew install gh
+```
+
+- [x] Authenticate GitHub CLI
+
+```bash
+gh auth login
+```
+
+Choose to authenticate with a web browser...
+
+Choose https...
+
+Configure GitHub CLI
+
+- [x] Set editor to nano so you don't have to leave the terminal
+
+```bash
+gh config set editor "nano --wait"
+```
+
+### Install GitHub Desktop
+
+[GitHub Desktop](https://desktop.github.com/)
+
+- [x] install GitHub Desktop
+- [x] create a new repo so you can set the default location for local repos to `smerth/developer/github`
+- [x] publish the new repo to GitHub
+
+### Working with Private Repos and Packages
+
+[This](https://viewsource.io/publishing-and-installing-private-github-packages-using-yarn-and-lerna/) is a nice flow to setting up the laptop to work with private packages.
+
+```bash
+npm install -g lerna
+```
+
+[Lerna Docs](https://lerna.js.org/docs/getting-started)
+
+[Authenticating to GitHub package registry](https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-npm-registry)
+
+## Authenticate by logging in
+
+To authenticate by logging in to npm, use the `npm login` command, replacing USERNAME with your GitHub username, TOKEN with your personal access token (classic), and PUBLIC-EMAIL-ADDRESS with your email address.
+
+If you are using npm CLI version 9 or greater and are logging in or out of a private registry using the command line, you should use the `--auth-type=legacy` option to read in your authentication details from prompts instead of using the default login flow through a browser. For more information, see [`npm-login`](https://docs.npmjs.com/cli/v9/commands/npm-login).
+
+If GitHub Packages is not your default package registry for using npm and you want to use the `npm audit` command, we recommend you use the `--scope` flag with the namespace that hosts the package (the personal account or organization to which the package is scoped) when you authenticate to GitHub Packages.
+
+```bash
+npm login --registry=https://npm.pkg.github.com --scope=@smerth
+```
+
+Will be prompted for:
+
+USERNAME: smerth
+
+PASSWORD: TOKEN
+
+PUBLIC-EMAIL-ADDRESS: stephen.merth@gmail.com
+
+```bash
+Username: smerth
+Password:
+Email: (this IS public) (stephen.merth@gmail.com) stephen.merth@gmail.com
+Logged in as smerth to scope @smerth on https://npm.pkg.github.com/.
+```
+
+this writes `.npmrc` to the user root directory of the laptop
+
+#### On a per repo basis
+
+You must add a `.npmrc` file to the the root of each repo with the a personal access token with permission to READ/WRITE PACKAGES.
+
+This directs npm to GitHub packages for packages prefixed `@smerth` and grants permision to download and publish.
+
+```bash
+//npm.pkg.github.com/:_authToken=TOKEN
+@smerth:registry=https://npm.pkg.github.com
+```
 
 ## NodeJS
 
