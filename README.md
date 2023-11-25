@@ -31,21 +31,22 @@ Get the Finder, Desktop and behaviour setup the way you like.
 
 ## Install fonts
 
-[Anonymous Pro Font](https://www.marksimonson.com/fonts/view/anonymous-pro)
+I like [Anonymous Pro Font](https://www.marksimonson.com/fonts/view/anonymous-pro) for VSCode and Terminal.  But I want the version with lots if icons so download from [Nerd Fonts](https://www.nerdfonts.com/font-downloads)
 
-- [ ] Download font, open Font Book and install all the fonts.
+Double click to open the archive and click on a font to open FontBook. Install the font then drag the remaining variants of the font to FontBook to install them.
 
-If you care about icons in the terminal consider: [Nerd Fonts](https://www.nerdfonts.com/font-downloads)
+## Install Git and Developer Tools
 
-https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.2/AnonymousPro.zip
+There is no fast way to do this so start it now.  Download and install XCode.  Then open and install developer tools to get clang and git installed.
 
-## Install apps from app store
+## Clone this repo to `/`
+
+Clone this repo to `/` to make it easy to click on links and copy scripts.
+
+## Install apps from app store.
 
 Download any apps you need from the App Store. Click on your account in the store to see a list of your previous purchases.
 
-- [x] Xcode
-  - [x] Open and install Command Line Tools
-  - [x] Goto: `settings > locations` check the path to Command Line Tools
 - [x] 1Password
   - [x] Open and connect to 1password database
 - [x] Authy
@@ -60,9 +61,9 @@ Download any apps you need from the App Store. Click on your account in the stor
 - [ ] Garage Band
 - [ ] Apple Developer
 
-## Log in to Github
+## Log in to Github on Safari
 
-Now that 1Password and Authy are installed, log in to GitHub as this will be usefull throughout.
+Later we'll abondon Safari in favor of Firefox but for since 1Password and Authy are installed, log in to GitHub as this will be useful throughout.
 
 ## Install Homebrew
 
@@ -71,117 +72,6 @@ Now that 1Password and Authy are installed, log in to GitHub as this will be use
 - [x] Install homebrew
 - [x] Run the terminal commands to finish the install
 - [x] View `.zprofile ` to check it was created
-
-## NodeJS
-
-### Nvm
-
-[NVM on GitHub](https://github.com/nvm-sh/nvm)
-
-- [x] install using the script on the nvm GitHub page
-- [x] add snippet to `.zshrc` to auto-load the version of node specified in `.nvmrc`
-
-### Node
-
-- [x] Install using nvm `nvm install 18`
-- [x] Install other node version and switch between `nvm use 16`
-
-> REMEMBER: Globally installed packages `npm install yarn -g` are installed for each environment (eg: 18 and 16) separately.
-
-- [x] Install node @ version 16 and 18 and install yarn globally in each environment.
-
-- [x] Create folders with `.nvmrc` and test auto-switching to specified version of node
-
-- [x] Install yarn for each environment
-
-```bash
-npm install --global yarn
-```
-
-### Configure NPM
-
-- [x] add npmrc
-
-@ home
-
-```bash
-touch .npmrc
-```
-
-- [x] Add yarnrc?
-
-@ home
-
-```bash
-init-author-name=Stephen Merth
-init-author-email=stephen.merth@gmail.com
-init-author-url=https://smerth.github.io/
-init-license=MIT
-email=stephen.merth@gmail.com
-registry=https://registry.npmjs.org
-//registry.npmjs.org/:_authToken=AUTH_TOKEN
-@smerth:registry=https://npm.pkg.github.com/smerth
-//npm.pkg.github.com/:_authToken=AUTH_TOKEN
-//npm.pkg.github.com/smerth/:_authToken=AUTH_TOKEN
-always-auth=true
-scripts-prepend-node-path=true
-```
-
-### Test the Node setup
-
-- [ ] create a test folder
-- [ ] cd in and run npm/yarn init
-- [ ] check `package.json`
-- [ ] install a package from you GitHub account
-- [ ] install a private package from your GitHub account
-
-## Python
-
-https://www.python.org/
-
-### Anaconda
-
-[Anaconda Free Distribution Download](https://www.anaconda.com/download)
-
-- [x] install the free version of anaconda (to manage python installations and environments) using HomeBrew.
-
-> anaconda comes with a big array of data science packages, use miniconda if all you want are python environments.
-
-https://learning.anaconda.cloud/path/intro-to-python
-
-> Check your dotfiles. Anaconda installs a `.bash_profile` with a script to initialize conda. To keep the dotfiles clean and because you are using zsh instead of bash, copy the block to the `.zprofile`. Check the terminal prompt which should show the current python environment (base by default.)
-
-### Set up Python Environments
-
-Now use condo to install python versions in their own environments
-
-```bash
-conda create --name py310
-```
-
-To activate this environment
-
-```bash
-conda activate py310
-```
-
-Install a specific python version in this environment
-
-```bash
-conda install python=3.10
-```
-
-To deactivate an active environment
-
-```bash
-conda deactivate
-```
-
-### Uninstall Anaconda
-
-[Remove environments](https://www.freecodecamp.org/news/how-to-delete-an-environment-in-conda/)
-
-[Uninstall Anaconda](https://docs.anaconda.com/free/anaconda/install/uninstall/)
 
 ## Install Git and GitHub
 
@@ -480,3 +370,115 @@ alias typora="/Applications/Typora.app/Contents/MacOS/Typora"
 in your `.bash_profile` or other configuration file.
 
 Then if you run `typora xxx.md` and `xxx.md` does not exists, Typora will pop up a dialog to ask you whether to create target file or cancel the operation.
+
+
+## NodeJS
+
+### Nvm
+
+[NVM on GitHub](https://github.com/nvm-sh/nvm)
+
+- [x] install using the script on the nvm GitHub page
+- [x] add snippet to `.zshrc` to auto-load the version of node specified in `.nvmrc`
+
+### Node
+
+- [x] Install using nvm `nvm install 18`
+- [x] Install other node version and switch between `nvm use 16`
+
+> REMEMBER: Globally installed packages `npm install yarn -g` are installed for each environment (eg: 18 and 16) separately.
+
+- [x] Install node @ version 16 and 18 and install yarn globally in each environment.
+
+- [x] Create folders with `.nvmrc` and test auto-switching to specified version of node
+
+- [x] Install yarn for each environment
+
+```bash
+npm install --global yarn
+```
+
+### Configure NPM
+
+- [x] add npmrc
+
+@ home
+
+```bash
+touch .npmrc
+```
+
+- [x] Add yarnrc?
+
+@ home
+
+```bash
+init-author-name=Stephen Merth
+init-author-email=stephen.merth@gmail.com
+init-author-url=https://smerth.github.io/
+init-license=MIT
+email=stephen.merth@gmail.com
+registry=https://registry.npmjs.org
+//registry.npmjs.org/:_authToken=AUTH_TOKEN
+@smerth:registry=https://npm.pkg.github.com/smerth
+//npm.pkg.github.com/:_authToken=AUTH_TOKEN
+//npm.pkg.github.com/smerth/:_authToken=AUTH_TOKEN
+always-auth=true
+scripts-prepend-node-path=true
+```
+
+### Test the Node setup
+
+- [ ] create a test folder
+- [ ] cd in and run npm/yarn init
+- [ ] check `package.json`
+- [ ] install a package from you GitHub account
+- [ ] install a private package from your GitHub account
+
+## Python
+
+https://www.python.org/
+
+### Anaconda
+
+[Anaconda Free Distribution Download](https://www.anaconda.com/download)
+
+- [x] install the free version of anaconda (to manage python installations and environments) using HomeBrew.
+
+> anaconda comes with a big array of data science packages, use miniconda if all you want are python environments.
+
+https://learning.anaconda.cloud/path/intro-to-python
+
+> Check your dotfiles. Anaconda installs a `.bash_profile` with a script to initialize conda. To keep the dotfiles clean and because you are using zsh instead of bash, copy the block to the `.zprofile`. Check the terminal prompt which should show the current python environment (base by default.)
+
+### Set up Python Environments
+
+Now use condo to install python versions in their own environments
+
+```bash
+conda create --name py310
+```
+
+To activate this environment
+
+```bash
+conda activate py310
+```
+
+Install a specific python version in this environment
+
+```bash
+conda install python=3.10
+```
+
+To deactivate an active environment
+
+```bash
+conda deactivate
+```
+
+### Uninstall Anaconda
+
+[Remove environments](https://www.freecodecamp.org/news/how-to-delete-an-environment-in-conda/)
+
+[Uninstall Anaconda](https://docs.anaconda.com/free/anaconda/install/uninstall/)
