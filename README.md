@@ -230,8 +230,6 @@ Then if you run `typora xxx.md` and `xxx.md` does not exists, Typora will pop up
 
 ## Install Git and GitHub
 
-
-
 [Install git, GitHub CLI and GitHub Git Credential Manager](https://docs.github.com/en/get-started/getting-started-with-git/caching-your-github-credentials-in-git)
 
 ### Install Git
@@ -252,20 +250,14 @@ brew install git
 brew install --cask git-credential-manager
 ```
 
-For MacOS, you don't need to run `git config` because GCM automatically configures Git for you.
-
 The next time you clone an HTTPS URL that requires authentication, Git will prompt you to log in using a browser window. You may first be asked to authorize an OAuth app. If your account or organization requires [two-factor auth](https://docs.github.com/en/authentication/securing-your-account-with-two-factor-authentication-2fa), you'll also need to complete the 2FA challenge.
 
 Once you've authenticated successfully, your credentials are stored in the macOS keychain and will be used every time you clone an HTTPS URL. Git will not require you to type your credentials in the command line again unless you change your credentials.
 
 - [x] clone a private repo to initiate authentication
-- [x] check .`gitconfig` against reference version
 
 For more information or to report issues with GCM, see the official GCM docs at "[Git Credential Manager](https://github.com/GitCredentialManager/git-credential-manager)."
 
-## Clone this repo to computer root directory
-
-To check whether you have access to private repos Ccone this repo to `/` to make it easy to click on links and copy scripts.
 
 ### Configure git
 
@@ -274,8 +266,10 @@ GitHub Credential Manager should configure git however if further config is nece
 ```bash
 git config --global user.name "Your Name Here"
 ```
-
 Global level configuration is user-specific, meaning it is applied to an operating system user. Global configuration values are stored in a file that is located in a user's home directory. `~ /.gitconfig` on unix systems
+
+- [x] check `.gitconfig` against reference version
+
 
 ### Install GitHub CLI
 
