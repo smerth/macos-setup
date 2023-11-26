@@ -341,6 +341,23 @@ nvm install 16
 nvm use 16 && nvm use 18
 ```
 
+### Install global packages
+
+Globally installed packages are installed for each environment (eg: 18 and 16) separately. The NPM package is an example.  If you use Node v16 and check NPM it should be an older version than the one used with Node 18.  Either version of NPM might require an update.
+
+**Update NPM**
+```shell
+npm install -g npm
+```
+
+**Install Yarn**
+```shell
+nvm use 18 && npm install -g npm
+```
+and 
+```shell
+nvm use 16 && npm install -g npm
+```
 
 ### Automatic Node Version Switching with AVN
 
@@ -358,40 +375,6 @@ npm install -g avn avn-nvm avn-n
 avn setup
 ```
 
-
-### Install global packages
-
-Globally installed packages are installed for each environment (eg: 18 and 16) separately. The npm package is an example.  If you use Node v16 and check npm it should be an older version than the one used with Node 18.  Either version of npm might require an update.
-
-**Update npm**
-```shell
-nvm use 18 && npm install -g npm
-```
-and 
-```shell
-nvm use 16 && npm install -g npm
-```
-
-**Install yarn**
-```shell
-nvm use 18 && npm install -g npm
-```
-and 
-```shell
-nvm use 16 && npm install -g npm
-```
-
-
-
-- [x] Install node @ version 16 and 18 and install yarn globally in each environment.
-
-- [x] Create folders with `.nvmrc` and test auto-switching to specified version of node
-
-- [x] Install yarn for each environment
-
-```bash
-npm install --global yarn
-```
 
 
 
