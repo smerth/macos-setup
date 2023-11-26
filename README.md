@@ -308,57 +308,6 @@ gh config set editor "nano --wait"
 - [x] create a new repo so you can set the default location for local repos to `smerth/developer/github`
 - [x] publish the new repo to GitHub
 
-### Working with Private Repos and Packages
-
-[This](https://viewsource.io/publishing-and-installing-private-github-packages-using-yarn-and-lerna/) is a nice flow to setting up the laptop to work with private packages.
-
-```bash
-npm install -g lerna
-```
-
-[Lerna Docs](https://lerna.js.org/docs/getting-started)
-
-[Authenticating to GitHub package registry](https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-npm-registry)
-
-## Authenticate by logging in
-
-To authenticate by logging in to npm, use the `npm login` command, replacing USERNAME with your GitHub username, TOKEN with your personal access token (classic), and PUBLIC-EMAIL-ADDRESS with your email address.
-
-If you are using npm CLI version 9 or greater and are logging in or out of a private registry using the command line, you should use the `--auth-type=legacy` option to read in your authentication details from prompts instead of using the default login flow through a browser. For more information, see [`npm-login`](https://docs.npmjs.com/cli/v9/commands/npm-login).
-
-If GitHub Packages is not your default package registry for using npm and you want to use the `npm audit` command, we recommend you use the `--scope` flag with the namespace that hosts the package (the personal account or organization to which the package is scoped) when you authenticate to GitHub Packages.
-
-```bash
-npm login --registry=https://npm.pkg.github.com --scope=@smerth
-```
-
-Will be prompted for:
-
-USERNAME: smerth
-
-PASSWORD: TOKEN
-
-PUBLIC-EMAIL-ADDRESS: stephen.merth@gmail.com
-
-```bash
-Username: smerth
-Password:
-Email: (this IS public) (stephen.merth@gmail.com) stephen.merth@gmail.com
-Logged in as smerth to scope @smerth on https://npm.pkg.github.com/.
-```
-
-this writes `.npmrc` to the user root directory of the laptop
-
-#### On a per repo basis
-
-You must add a `.npmrc` file to the the root of each repo with the a personal access token with permission to READ/WRITE PACKAGES.
-
-This directs npm to GitHub packages for packages prefixed `@smerth` and grants permision to download and publish.
-
-```bash
-//npm.pkg.github.com/:_authToken=TOKEN
-@smerth:registry=https://npm.pkg.github.com
-```
 
 ## NodeJS
 
@@ -417,11 +366,66 @@ scripts-prepend-node-path=true
 
 ### Test the Node setup
 
+Make this section very straight forward by making it into a bash script if necessary and then test using glym
+
 - [ ] create a test folder
 - [ ] cd in and run npm/yarn init
 - [ ] check `package.json`
 - [ ] install a package from you GitHub account
 - [ ] install a private package from your GitHub account
+
+### Working with Private Repos and Packages
+
+[This](https://viewsource.io/publishing-and-installing-private-github-packages-using-yarn-and-lerna/) is a nice flow to setting up the laptop to work with private packages.
+
+```bash
+npm install -g lerna
+```
+
+[Lerna Docs](https://lerna.js.org/docs/getting-started)
+
+[Authenticating to GitHub package registry](https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-npm-registry)
+
+## Authenticate by logging in
+
+To authenticate by logging in to npm, use the `npm login` command, replacing USERNAME with your GitHub username, TOKEN with your personal access token (classic), and PUBLIC-EMAIL-ADDRESS with your email address.
+
+If you are using npm CLI version 9 or greater and are logging in or out of a private registry using the command line, you should use the `--auth-type=legacy` option to read in your authentication details from prompts instead of using the default login flow through a browser. For more information, see [`npm-login`](https://docs.npmjs.com/cli/v9/commands/npm-login).
+
+If GitHub Packages is not your default package registry for using npm and you want to use the `npm audit` command, we recommend you use the `--scope` flag with the namespace that hosts the package (the personal account or organization to which the package is scoped) when you authenticate to GitHub Packages.
+
+```bash
+npm login --registry=https://npm.pkg.github.com --scope=@smerth
+```
+
+Will be prompted for:
+
+USERNAME: smerth
+
+PASSWORD: TOKEN
+
+PUBLIC-EMAIL-ADDRESS: stephen.merth@gmail.com
+
+```bash
+Username: smerth
+Password:
+Email: (this IS public) (stephen.merth@gmail.com) stephen.merth@gmail.com
+Logged in as smerth to scope @smerth on https://npm.pkg.github.com/.
+```
+
+this writes `.npmrc` to the user root directory of the laptop
+
+#### On a per repo basis
+
+You must add a `.npmrc` file to the the root of each repo with the a personal access token with permission to READ/WRITE PACKAGES.
+
+This directs npm to GitHub packages for packages prefixed `@smerth` and grants permision to download and publish.
+
+```bash
+//npm.pkg.github.com/:_authToken=TOKEN
+@smerth:registry=https://npm.pkg.github.com
+```
+
 
 ## Python
 
