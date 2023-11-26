@@ -318,6 +318,23 @@ gh config set editor "nano --wait"
 - [x] install using the script on the nvm GitHub page
 - [x] add snippet to `.zshrc` to auto-load the version of node specified in `.nvmrc`
 
+### AVN
+
+[Automatic Version Switching for Node.js](https://github.com/wbyoung/avn)
+
+Switch to the version of Node defined in `.nvmrc` in a new dircetory, upon entering the directory, if `.nvmrc` exists.
+
+**Install**
+```shell
+npm install -g avn avn-nvm avn-n
+```
+
+**Setup**
+```shell
+avn setup
+```
+
+
 ### Node
 
 - [x] Install using nvm `nvm install 18`
