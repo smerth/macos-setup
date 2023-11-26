@@ -228,9 +228,8 @@ Then if you run `typora xxx.md` and `xxx.md` does not exists, Typora will pop up
 
 
 
-## Install Git and GitHub
+## Install Git, GitHub Git Credential Manager, GitHub CLI and GitHub Desktop
 
-[Install git, GitHub CLI and GitHub Git Credential Manager](https://docs.github.com/en/get-started/getting-started-with-git/caching-your-github-credentials-in-git)
 
 ### Install Git
 
