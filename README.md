@@ -313,17 +313,20 @@ gh config set editor "nano --wait"
 
 ### Nvm
 
-[NVM on GitHub](https://github.com/nvm-sh/nvm)
+Homebrew installation is not supported. If you have issues with homebrew-installed nvm, please brew uninstall it, and install it using the instructions below, before filing an issue.
+
+Note: If you're using zsh you can easily install nvm as a zsh plugin. Install zsh-nvm and run nvm upgrade to upgrade. (Check the long list of options in the project readme.)
+
+We are going to install nvm following the instructions on the [nvm project page on GitHub](https://github.com/nvm-sh/nvm)
 
 - [x] install using the script on the nvm GitHub page
+
 
 ### AVN
 
 Following the instructions on the GitHub project page you can add a snippet to `.zshrc` to auto-load the version of node specified in `.nvmrc`
 
-However [Automatic Version Switching for Node.js](https://github.com/wbyoung/avn) seems like a cleaner way to go
-
-Switch to the version of Node defined in `.nvmrc` in a new dircetory, upon entering the directory, if `.nvmrc` exists.
+However [Automatic Version Switching for Node.js](https://github.com/wbyoung/avn) seems like a cleaner way to go it switches to the version of Node defined in `.nvmrc` in a new dircetory, upon entering the directory, if `.nvmrc` exists.
 
 **Install**
 ```shell
