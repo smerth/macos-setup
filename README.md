@@ -316,11 +316,12 @@ gh config set editor "nano --wait"
 [NVM on GitHub](https://github.com/nvm-sh/nvm)
 
 - [x] install using the script on the nvm GitHub page
-- [x] add snippet to `.zshrc` to auto-load the version of node specified in `.nvmrc`
 
 ### AVN
 
-[Automatic Version Switching for Node.js](https://github.com/wbyoung/avn)
+Following the instructions on the GitHub project page you can add a snippet to `.zshrc` to auto-load the version of node specified in `.nvmrc`
+
+However [Automatic Version Switching for Node.js](https://github.com/wbyoung/avn) seems like a cleaner way to go
 
 Switch to the version of Node defined in `.nvmrc` in a new dircetory, upon entering the directory, if `.nvmrc` exists.
 
