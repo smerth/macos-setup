@@ -322,7 +322,39 @@ We are going to install nvm following the instructions on the [nvm project page 
 - [x] install using the script on the nvm GitHub page
 
 
-### AVN
+### Install Node Versions
+
+Install Node 16 and 18 to support your legacy GitHub projects
+
+**Install Node v18**
+```shell
+nvm install 18
+```
+
+**Install Node v16**
+```shell
+nvm install 16
+```
+
+**Test manually switching between Node versions**
+```shell
+nvm use 16 && nvm use 18
+```
+
+### Install global packages
+> REMEMBER: Globally installed packages `npm install yarn -g` are installed for each environment (eg: 18 and 16) separately.
+
+- [x] Install node @ version 16 and 18 and install yarn globally in each environment.
+
+- [x] Create folders with `.nvmrc` and test auto-switching to specified version of node
+
+- [x] Install yarn for each environment
+
+```bash
+npm install --global yarn
+```
+
+### Automatic Node Version Switching with AVN
 
 Following the instructions on the GitHub project page you can add a snippet to `.zshrc` to auto-load the version of node specified in `.nvmrc`
 
@@ -339,22 +371,7 @@ avn setup
 ```
 
 
-### Node
 
-- [x] Install using nvm `nvm install 18`
-- [x] Install other node version and switch between `nvm use 16`
-
-> REMEMBER: Globally installed packages `npm install yarn -g` are installed for each environment (eg: 18 and 16) separately.
-
-- [x] Install node @ version 16 and 18 and install yarn globally in each environment.
-
-- [x] Create folders with `.nvmrc` and test auto-switching to specified version of node
-
-- [x] Install yarn for each environment
-
-```bash
-npm install --global yarn
-```
 
 ### Configure NPM
 
