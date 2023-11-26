@@ -109,23 +109,29 @@ Now is a good time to open each app installed via the App store, dragged in from
 - [x] Choose the font and size
 - [x]     use the previously installed anonymice mono font @ size 22
 
-### Configure iTerm2
+### Install Oh-My-Zsh
 
-Oh-My-Zsh is the quickest way to get a nice terminal experiance using iTerm2.  Install [Oh My Zsh](https://ohmyz.sh/)
+Oh-My-Zsh is the quickest way to get a nice terminal experiance.  Install [Oh My Zsh](https://ohmyz.sh/)
 
 ```bash
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ```
 
-Change theme in the `.zshrc` file.
+**Change the theme**
 
-```bash
+Change theme in the `.zshrc` file.  If you use iTerm2 you can choose freely from any on the available themes.  However, if you use Warp you need to choose a theme with a relatively clean prompt since Warp adds alot of formatting to the prompt and the history blocks of previously executed code.
+
+Try: 
+```shell
 ZSH_THEME="af-magic"
-or
+```
+or 
+```shell
 ZSH_THEME="half-life"
 ```
 
-#### Further configuration for iTerm2
+
+### Configure iTerm2
 
 **Set theme**
 
