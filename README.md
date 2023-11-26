@@ -2,18 +2,19 @@
 
 Setup a new Mac for web development.
 
-> **_N.B. If you install Homebrew then install and configure Warp first, you can open this README in Warp and click on bash blocks within the doc to execute bash scripts in the Warp terminal._**
+> **N.B. The Warp terminal has alot of nifty super-powers. So, we're going to use it until they begin charging a monthly subscription fee for it.  Then we are going to abandon it.  For now the super-power that will make setting up your MacOS easier is the fact you can open a markdown file in Warp.  If you do, any code blocks in the readme will be executable with a simple click.
+> To take advantage of that super-power to work through this readme you can do the following:**
+> -  Log in to Github on Safari.  Later we'll abondon Safari in favor of Firefox but for now log in to GitHub as this will be useful throughout.
+> -  Download the zip of this repo to your user root.
+> -  Install [Homebrew](https://brew.sh/)
+>   -  Run the terminal commands to finish the install
+>   -  View `.zprofile ` to check it was created
+> -  Install Warp terminal `brew install warp`
+> -  Open this README in Warp
 
-## Log in to Github on Safari
 
-Later we'll abondon Safari in favor of Firefox but for now log in to GitHub as this will be useful throughout.
 
-## Download the zip of this repo
 
-Move from Downloads to `~/User/`
-```shell
-mv macos-setup-main ../macos-setup
-```
 
 ## Install Developer Tools
 
@@ -130,6 +131,62 @@ or
 ZSH_THEME="half-life"
 ```
 
+#### Install Oh-My-Zsh plugins
+
+**Install nvm via the zsh-nvm plugin**
+Clone zsh-nvm into your custom plugins repo
+```shell
+git clone https://github.com/lukechilds/zsh-nvm ~/.oh-my-zsh/custom/plugins/zsh-nvm
+```
+
+export settings for zsh-nvm and load the plugin in `.zshrc`
+```shell
+export NVM_AUTO_USE=true
+plugins+=(zsh-nvm)
+```
+
+source `.zshrc`
+```shell
+source .zshrc 
+```
+
+**Install two versions of node**
+Install Node at version 18
+```shell
+nvm install 18
+```
+Install Node at version 16
+```shell
+nvm install 16
+```
+
+**Test auto-switching between Node versions**
+To make sure all previous changes take effect close out your terminal shell and re-open a fresh one
+```shell
+mkdir one && cd one && touch .nvmrc && echo "v16" > .nvmrc
+```
+and 
+```shell
+mkdir one && cd one && touch .nvmrc && echo "v18" > .nvmrc
+```
+check auto switching
+```shell
+node --version && cd one && cd ../two && cd ../one && cd ../
+```
+
+
+
+
+<u>zsh-syntax-highlighting</u>
+
+follow the install proceedure for 0h-my-zsh https://github.com/robbyrussell/oh-my-zsh
+
+<u>zsh-autosuggestions</u>
+
+follow the install proceedure for 0h-my-zsh https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md#oh-my-zsh
+
+
+
 
 ### Configure iTerm2
 
@@ -151,15 +208,7 @@ ZSH_THEME="half-life"
 - [x] `settings > profiles > text > font` set to "Anonymous Pro Font" or "AnonymicePro Font" for the Nerd Font version with the icons
 - [x] set font size to "22"
 
-**Install plugins**
 
-<u>zsh-syntax-highlighting</u>
-
-follow the install proceedure for 0h-my-zsh https://github.com/robbyrussell/oh-my-zsh
-
-<u>zsh-autosuggestions</u>
-
-follow the install proceedure for 0h-my-zsh https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md#oh-my-zsh
 
 **Load new tabs and windows in previous location**
 
