@@ -1,6 +1,6 @@
 # Setup New MacOS based computer for development with Node and Python
 
-This readme outlines how I setup a new MacOS for general use and for Node and Python development.  The repo contains some shell scripts to help speedup the process and some reference material to help clarify the steps.
+This readme outlines how I setup a new MacOS for general use and for Node and Python development.  The repo contains some shell scripts to help speed-up the process and some reference material to help clarify the steps.
 
 If you follow these steps **sequentially without jumping around**, and trust we will cover all the major steps, it should be a fairly fast and efficient setup.
 
