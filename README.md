@@ -456,15 +456,11 @@ gh config set editor "nano --wait"
 
 We're going to use Anaconda to setup and manage Python environments.  Anaconda comes with a big array of data science packages, use `miniconda` if all you want are python environments.
 
-----
-
-Download the [Anaconda Free Distribution](https://www.anaconda.com/download) and use the installer
-
-- [x] install the free version of anaconda (to manage python installations and environments) using HomeBrew.
+Download the [Anaconda Free Distribution](https://www.anaconda.com/download) and use the installer.  Don't use Homebrew to install Anaconda.  The installer offers more control over the placement of files.
 
 
 
-https://learning.anaconda.cloud/path/intro-to-python
+
 
 > Check your dotfiles. Anaconda installs a `.bash_profile` with a script to initialize conda. To keep the dotfiles clean and because you are using zsh instead of bash, copy the block to the `.zprofile`. Check the terminal prompt which should show the current python environment (base by default.)
 
@@ -493,6 +489,10 @@ To deactivate an active environment
 ```bash
 conda deactivate
 ```
+
+### Anaconda Overview
+
+[Learning Anaconda](https://learning.anaconda.cloud/path/intro-to-python)
 
 ### Uninstall Anaconda
 
