@@ -1,6 +1,6 @@
 # Setup New Laptop
 
-This readme outlines how I setup a new MacOS for Node and Python development.  The repo contains some shell scripts to help speedup the process and some reference material to help clarify the process.
+This readme outlines how I setup a new MacOS for Node and Python development.  The repo contains some shell scripts to help speedup the process and some reference material to help clarify the steps.
 
 > **The Warp terminal has alot of nifty super-powers. So, we're going to use it until they begin charging a monthly subscription fee for it.  Then we are going to abandon it.  For now the super-power that will make setting up your MacOS easier is the fact you can open a markdown file in Warp.  If you do, any code blocks in the readme will be executable with a simple click.
 > To take advantage of that super-power to work through this readme you can do the following:**
