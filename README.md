@@ -106,8 +106,7 @@ zsh install-casks.zsh
 
 ### Open each app you have installed
 
-Now is a good time to open each app installed via the App store, dragged in from a legacy apps folder or installed by Homebrew.  Open each app and access preferences with `cmd + ,`  Authorize each app if necessary and set preferences.
-
+Now is a good time to open each app installed via Homebrew.  Open each app and access preferences with `cmd + ,`  Authorize each app if necessary and set preferences.
 
 
 ### Install Oh-My-Zsh
@@ -132,6 +131,46 @@ ZSH_THEME="half-life"
 ```
 
 ### Install Oh-My-Zsh plugins
+
+**zsh-syntax-highlighting**
+
+Setup syntax highlighting for Terminal and iTerm2 if you use them (I can't get it to work with Warp)
+
+Follow [install directions for Oh-My-Zsh]([https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md](https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md#oh-my-zsh))
+
+Clone this repository in oh-my-zsh's plugins directory:
+```shell
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+```
+Activate the plugin in ~/.zshrc:
+```shell
+plugins=( [plugins...] zsh-syntax-highlighting)
+```
+Restart zsh (such as by opening a new instance of your terminal emulator).
+
+
+**zsh-autosuggestions**
+
+Follow the install for [install for Oh-My-Zsh](https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md#oh-my-zsh)
+
+Clone this repository into `$ZSH_CUSTOM/plugins` (by default `~/.oh-my-zsh/custom/plugins`)
+```shell
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+```
+
+Add the plugin to the list of plugins for Oh My Zsh to load (inside ~/.zshrc):
+```shell
+plugins=( 
+    # other plugins...
+    zsh-autosuggestions
+)
+```
+
+Start a new terminal session.
+
+## Setup Node.js
+
+We are going to install Node using nvm so we easily manage Node versions.  We are going to install nvm as an Oh-My-Zsh plugin
 
 **zsh-nvm**
 
@@ -213,101 +252,56 @@ scripts-prepend-node-path=true
 ```
 
 
-
-
-
-
-
-
-
-**zsh-syntax-highlighting**
-
-Setup syntax highlighting for Terminal and iTerm2 if you use them (I can't get it to work with Warp)
-
-Follow [install directions for Oh-My-Zsh]([https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md](https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md#oh-my-zsh))
-
-Clone this repository in oh-my-zsh's plugins directory:
-```shell
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
-```
-Activate the plugin in ~/.zshrc:
-```shell
-plugins=( [plugins...] zsh-syntax-highlighting)
-```
-Restart zsh (such as by opening a new instance of your terminal emulator).
-
-
-**zsh-autosuggestions**
-
-Follow the install for [install for Oh-My-Zsh](https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md#oh-my-zsh)
-
-Clone this repository into `$ZSH_CUSTOM/plugins` (by default `~/.oh-my-zsh/custom/plugins`)
-```shell
-git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
-```
-
-Add the plugin to the list of plugins for Oh My Zsh to load (inside ~/.zshrc):
-```shell
-plugins=( 
-    # other plugins...
-    zsh-autosuggestions
-)
-```
-
-Start a new terminal session.
-
-
-
-
-
-### Configure iTerm2
+## Configure iTerm2
 
 **Set theme**
 
-- [x] @ `settings > profiles > general > theme` set to "Dark"
+- [ ] @ `settings > profiles > general > theme` set to "Dark"
 
 **Install a color palette**
 
-- [x] Install a color palette
-  - [x] go to https://iterm2colorschemes.com/ and choose colours palette
-  - [x] create a file on the desktop with ext `.itermcolors`
-  - [x] paste choosen color palette into file
-  - [x] doouble click file to load colours into presets
-  - [x] go to `settings > profiles > colours` and choose the preset
+- [ ] go to https://iterm2colorschemes.com/ and choose colours palette
+- [ ] create a file on the desktop with ext `.itermcolors`
+- [ ] paste choosen color palette into file
+- [ ] doouble click file to load colours into presets
+- [ ] go to `settings > profiles > colours` and choose the preset
 
 **Choose a font**
 
-- [x] `settings > profiles > text > font` set to "Anonymous Pro Font" or "AnonymicePro Font" for the Nerd Font version with the icons
-- [x] set font size to "22"
-
-
+- [ ] `settings > profiles > text > font` set to "Anonymous Pro Font" or "AnonymicePro Font" for the Nerd Font version with the icons
+- [ ] set font size to "22"
 
 **Load new tabs and windows in previous location**
 
-- [x] @ `Preferences > Profiles > General > Working Directory` set to "Reuse previous sessions directory"
+- [ ] @ `Preferences > Profiles > General > Working Directory` set to "Reuse previous sessions directory"
 
 **Use opt + arrow to move across tokens in a text string**
 
-- [x] @ `Preferences > Profiles > Keys > Key Mapping > Presets` set to "Natural Text Editing"
+- [ ] @ `Preferences > Profiles > Keys > Key Mapping > Presets` set to "Natural Text Editing"
 
-### Configure VSCode
 
-- [x] Turn on settings sync (syncs settings with Github account)
-- [x] Under turn on "linked tag editing" in: settings > linked editing
+## Configure VSCode
+
+- [ ] Turn on settings sync (syncs settings with Github account)
+- [ ] Under turn on "linked tag editing" in: settings > linked editing
 
 #### Install extensions
 
-- [x] Just Black + comments (theme)
-- [x] Font size shortcuts
-- [x] GitHub Copilot (requires subscription)
-- [x] GitLens
-- [x] Jupyter
-- [x] Python
-- [x] Rainbow CSV
-- [x] Prettier
-- [x] Vscode icons
-- [x] live server
-- [x] vsc-nvm
+If you synched settings for VSCode from a previous install this won't be necessary.
+
+Current Favorites:
+
+- [ ] Just Black + comments (theme)
+- [ ] Font size shortcuts
+- [ ] GitHub Copilot (requires subscription)
+- [ ] GitLens
+- [ ] Jupyter
+- [ ] Python
+- [ ] Rainbow CSV
+- [ ] Prettier
+- [ ] Vscode icons
+- [ ] live server
+- [ ] vsc-nvm
 
 Consider:
 
@@ -320,35 +314,30 @@ Consider:
 - [ ] Debugger for chrome (and also does Firefox)
 - [ ] rest client
 
-### Configure Firefox Developer
+## Configure Firefox Developer
 
-- [x] Set as default browser
+Set preferences
+- [ ] Set as default browser
+- [ ] Setup url white list for cookies
 
-- [x] Setup url white list for cookies
+Install extensions
+- [ ] privacy badger
+- [ ] ublock origin
 
-install extensions
-
-- [x] privacy badger
-- [x] ublock origin
-
-### Typora
+## Configure Typora
 
 You can use `open -a typora xxx.md` to open the markdown file `xxx.md` in Typora from a command line. If Typora is your default editor for `.md` files, when `open xxx.md` would be enough.
 
 You can also add
-
 ```
 alias tp="open -a typora"
 ```
-
 in your `.bash_profile` or `.zprofile` other configuration file, then you would be able to simply type `typora xxx.md` instead.
 
 (Requires Typora ≥ 1.1) If you want to use command line to not only open existing files, but also creating new files when target `.md` file does not exists, you could add
-
 ```
 alias typora="/Applications/Typora.app/Contents/MacOS/Typora"
 ```
-
 in your `.bash_profile` or other configuration file.
 
 Then if you run `typora xxx.md` and `xxx.md` does not exists, Typora will pop up a dialog to ask you whether to create target file or cancel the operation.
@@ -360,7 +349,7 @@ Then if you run `typora xxx.md` and `xxx.md` does not exists, Typora will pop up
 
 ### Install Git
 
-- [x] intall git using Homebrew:
+Git is installed when the developer tools are installed however I prefer to manage installs through Homebrew where possible
 
 ```bash
 brew install git
@@ -370,8 +359,6 @@ brew install git
 
 [Git Credential Manager](https://github.com/GitCredentialManager/git-credential-manager) (GCM) is another way to store your credentials securely and connect to GitHub over HTTPS. With GCM, you don't have to manually [create and store a personal access token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token), as GCM manages authentication on your behalf, including 2FA (two-factor authentication).
 
-- [x] Install GCM using Homebrew:
-
 ```shell
 brew install --cask git-credential-manager
 ```
@@ -380,7 +367,7 @@ The next time you clone an HTTPS URL that requires authentication, Git will prom
 
 Once you've authenticated successfully, your credentials are stored in the macOS keychain and will be used every time you clone an HTTPS URL. Git will not require you to type your credentials in the command line again unless you change your credentials.
 
-- [x] clone a private repo to initiate authentication
+- [ ] clone a private repo to initiate authentication
 
 For more information or to report issues with GCM, see the official GCM docs at "[Git Credential Manager](https://github.com/GitCredentialManager/git-credential-manager)."
 
@@ -392,9 +379,38 @@ GitHub Credential Manager should configure git however if further config is nece
 ```bash
 git config --global user.name "Your Name Here"
 ```
+
 Global level configuration is user-specific, meaning it is applied to an operating system user. Global configuration values are stored in a file that is located in a user's home directory. `~ /.gitconfig` on unix systems
 
-- [x] check `.gitconfig` against reference version
+- [ ] check `.gitconfig` against this reference version
+
+```shell
+[filter "lfs"]
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+[user]
+	name = Stephen Merth
+	email = stephen.merth@gmail.com
+	twitter = StephenMerth
+[push]
+	default = simple
+	autoSetupRemote = true
+[color]
+	ui = auto
+[core]
+	pager = less -r
+	autocrlf = input
+	ignorecase = false	
+[credential]
+	helper = 
+	helper = /usr/local/share/gcm-core/git-credential-manager
+[init]
+	defaultBranch = main
+[credential "https://dev.azure.com"]
+	useHttpPath = true
+```
 
 
 ### Install GitHub CLI
@@ -403,26 +419,21 @@ Global level configuration is user-specific, meaning it is applied to an operati
 
 [GitHub CLI tutorial](https://www.youtube.com/watch?v=BRAG1Kj4-Ss)
 
-- [x] Install GitHub CLI
-
+Install GitHub CLI
 ```bash
 brew install gh
 ```
 
-- [x] Authenticate GitHub CLI
-
+Authenticate GitHub CLI
 ```bash
 gh auth login
 ```
 
-Choose to authenticate with a web browser...
+- Choose to authenticate with a web browser...
+- Choose https...
 
-Choose https...
-
-Configure GitHub CLI
-
-- [x] Set editor to nano so you don't have to leave the terminal
-
+**Configure GitHub CLI**
+Set editor to nano so you don't have to leave the terminal
 ```bash
 gh config set editor "nano --wait"
 ```
@@ -431,89 +442,26 @@ gh config set editor "nano --wait"
 
 [GitHub Desktop](https://desktop.github.com/)
 
-- [x] install GitHub Desktop
-- [x] create a new repo so you can set the default location for local repos to `smerth/developer/github`
-- [x] publish the new repo to GitHub
+- [ ] install GitHub Desktop
+- [ ] create a new repo so you can set the default location for local repos to `smerth/developer/github`
+- [ ] publish the new repo to GitHub
 
 
-## NodeJS
+## Install Python
 
-
-
-### Test the Node setup
-
-Make this section very straight forward by making it into a bash script if necessary and then test using glym
-
-- [ ] create a test folder
-- [ ] cd in and run npm/yarn init
-- [ ] check `package.json`
-- [ ] install a package from you GitHub account
-- [ ] install a private package from your GitHub account
-
-### Working with Private Repos and Packages
-
-[This](https://viewsource.io/publishing-and-installing-private-github-packages-using-yarn-and-lerna/) is a nice flow to setting up the laptop to work with private packages.
-
-```bash
-npm install -g lerna
-```
-
-[Lerna Docs](https://lerna.js.org/docs/getting-started)
-
-[Authenticating to GitHub package registry](https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-npm-registry)
-
-## Authenticate by logging in
-
-To authenticate by logging in to npm, use the `npm login` command, replacing USERNAME with your GitHub username, TOKEN with your personal access token (classic), and PUBLIC-EMAIL-ADDRESS with your email address.
-
-If you are using npm CLI version 9 or greater and are logging in or out of a private registry using the command line, you should use the `--auth-type=legacy` option to read in your authentication details from prompts instead of using the default login flow through a browser. For more information, see [`npm-login`](https://docs.npmjs.com/cli/v9/commands/npm-login).
-
-If GitHub Packages is not your default package registry for using npm and you want to use the `npm audit` command, we recommend you use the `--scope` flag with the namespace that hosts the package (the personal account or organization to which the package is scoped) when you authenticate to GitHub Packages.
-
-```bash
-npm login --registry=https://npm.pkg.github.com --scope=@smerth
-```
-
-Will be prompted for:
-
-USERNAME: smerth
-
-PASSWORD: TOKEN
-
-PUBLIC-EMAIL-ADDRESS: stephen.merth@gmail.com
-
-```bash
-Username: smerth
-Password:
-Email: (this IS public) (stephen.merth@gmail.com) stephen.merth@gmail.com
-Logged in as smerth to scope @smerth on https://npm.pkg.github.com/.
-```
-
-this writes `.npmrc` to the user root directory of the laptop
-
-#### On a per repo basis
-
-You must add a `.npmrc` file to the the root of each repo with the a personal access token with permission to READ/WRITE PACKAGES.
-
-This directs npm to GitHub packages for packages prefixed `@smerth` and grants permision to download and publish.
-
-```bash
-//npm.pkg.github.com/:_authToken=TOKEN
-@smerth:registry=https://npm.pkg.github.com
-```
-
-
-## Python
-
-https://www.python.org/
+[Python](https://www.python.org/)
 
 ### Anaconda
 
-[Anaconda Free Distribution Download](https://www.anaconda.com/download)
+We're going to use Anaconda to setup and manage Python environments.  Anaconda comes with a big array of data science packages, use `miniconda` if all you want are python environments.
+
+----
+
+Download the [Anaconda Free Distribution](https://www.anaconda.com/download) and use the installer
 
 - [x] install the free version of anaconda (to manage python installations and environments) using HomeBrew.
 
-> anaconda comes with a big array of data science packages, use miniconda if all you want are python environments.
+
 
 https://learning.anaconda.cloud/path/intro-to-python
 
