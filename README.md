@@ -8,8 +8,7 @@ This readme outlines how I setup a new MacOS for Node and Python development.  T
 > -  Install [Homebrew](https://brew.sh/)
 >   -  Run the terminal commands to finish the install
 > -  Install Warp terminal `brew install warp`
-> -  Open this README in Warp
-> Start clicking on code blocks to execute them
+> -  Open this README in Warp and start clicking on code blocks to execute them
 
 
 
