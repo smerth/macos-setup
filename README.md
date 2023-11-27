@@ -49,15 +49,27 @@ brew install warp
 ```
 
 
-## Sign into and configure Warp
+## Sign into Warp
 
-- [x] login using GitHub
-- [x] Choose prompt
-- [x] Choose theme
-- [x] Choose the font and size
-- [x]     use the previously installed anonymice mono font @ size 22
+- [ ] First login to your Github account in the web browser
+- [ ] Login to Warp using your GitHub account (you'll be redirected to GitHub in the Browser)
 
 
+## Configure Warp
+
+- [ ] Choose prompt
+- [ ] Choose theme
+- [ ] Choose the font (use the previously installed **Anonymice Pro Mono** font)
+- [ ] Set font size to "22"
+
+
+## Open This readme in Warp
+
+You can open a markdown file in Warp, then you can execute any code blocks in the markdown by clicking on the code block. This will make moving through this readme much faster than cutting and pasting code into terminal.
+
+```shell
+cd ~/macos-setup && open README.md -a warp
+```
 
 
 
