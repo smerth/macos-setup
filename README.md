@@ -86,7 +86,7 @@ Open and read the list of casks to be installed.
 cd install-brew-casks && open cask-list.txt -a textedit
 ```
 
-Check `cask-list.txt` to make sure the apps you want to install are all there.  Add or subtract apps as you see fit. Check the `useful-casks.txt` file for more into about various interesting casks.
+- [ ] Check `cask-list.txt` to make sure the apps you want to install are all there.  Add or subtract apps as you see fit. Check the `useful-casks.txt` file for more into about various interesting casks.
 
 Run the cask install script
 
@@ -99,47 +99,6 @@ zsh install-casks.zsh
 > Stick around during this process. You might need to to provide the login password for the computer during one or more of these installations.
 > 
 > This will take some time...  get yourself a tea...
-
-
-## iCloud
-
-If you are using a Mac, your most important data (contacts, messages, calendars, music, etc) is synched to iCloud. Get that data onto your new Mac
-
-- [x] log-in to iCloud
-- [x] turn on synching for all the data that is relevant to you
-- [x] open all apple applications, click through introductory windows, and make sure they are synced with iCloud
-
-## MacOS preferences
-
-Get the Finder, Desktop and behaviour setup the way you like.
-
-- [x] Simplify the dock
-- [x] Simplify the menubar by moving widgets into settings and removing separate widgets
-- [x] Setup finder windows the way you like
-- [x] Turn on stage manager (or toggle under settings when you want it)
-- [x] Show widgets on desktop if you want them
-- [x] Set widget style monochrome
-- [x] Turn on mission control
-- [x] Turn on hot corners:
-  - [x] TL - mission control
-  - [x] TR - application window
-  - [x] BL - screen saver
-  - [x] BR - desktop
-
-## Install apps from app store.
-
-Download any apps you need from the App Store. Click on your account in the store to see a list of your previous purchases.
-
-- [x] 1Password
-  - [x] Open and connect to 1password database
-- [x] Authy
-  - [x] Open and connect to Authy database
-- [x] Numbers
-- [x] Affinity Designer
-- [x] Magnet
-- [x] Transmit
-  - [x] Download from Panic (not the app store)
-
 
 
 
@@ -591,3 +550,47 @@ conda deactivate
 [Remove environments](https://www.freecodecamp.org/news/how-to-delete-an-environment-in-conda/)
 
 [Uninstall Anaconda](https://docs.anaconda.com/free/anaconda/install/uninstall/)
+
+
+
+
+## iCloud
+
+If you are using a Mac, your most important data (contacts, messages, calendars, music, etc) is synched to iCloud. Get that data onto your new Mac
+
+- [x] log-in to iCloud
+- [x] turn on synching for all the data that is relevant to you
+- [x] open all apple applications, click through introductory windows, and make sure they are synced with iCloud
+
+## MacOS preferences
+
+Get the Finder, Desktop and behaviour setup the way you like.
+
+- [x] Simplify the dock
+- [x] Simplify the menubar by moving widgets into settings and removing separate widgets
+- [x] Setup finder windows the way you like
+- [x] Turn on stage manager (or toggle under settings when you want it)
+- [x] Show widgets on desktop if you want them
+- [x] Set widget style monochrome
+- [x] Turn on mission control
+- [x] Turn on hot corners:
+  - [x] TL - mission control
+  - [x] TR - application window
+  - [x] BL - screen saver
+  - [x] BR - desktop
+
+## Install apps from app store.
+
+Download any apps you need from the App Store. Click on your account in the store to see a list of your previous purchases.
+
+- [x] 1Password
+  - [x] Open and connect to 1password database
+- [x] Authy
+  - [x] Open and connect to Authy database
+- [x] Numbers
+- [x] Affinity Designer
+- [x] Magnet
+- [x] Transmit
+  - [x] Download from Panic (not the app store)
+
+
