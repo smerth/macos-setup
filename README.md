@@ -72,28 +72,33 @@ cd ~/macos-setup && open README.md -a warp
 ```
 
 
-
-
-
 ## Install casks (apps) with Homebrew
 
-In Homebrew parlance apps are called casks.  We are going to programatically install a number of casks back to back. To prepare for that first run
+In Homebrew parlance apps are called casks.  We are going to programatically install a number of casks back to back. To prepare for that first run this command it will download the list of versions for all casks.  we need this because we will install some versions of casks that are off the main release (eg. Firefox Developer Edition)
 
 ```bash
 brew tap homebrew/cask-versions
 ```
 
-Check the `cask-list` in `install-brew-casks` to make sure the apps you want to install are all there.  Decide whether you are using iTerminal or Warp as you terminal replacement. If you are using Warp you don't need oh-my-zsh.  Check the `useful-casks` file for more into about various interesting casks.
+Open and read the list of casks to be installed.
 
-Run the install script
+```shell
+cd install-brew-casks && open cask-list.txt -a textedit
+```
+
+Check `cask-list.txt` to make sure the apps you want to install are all there.  Add or subtract apps as you see fit. Check the `useful-casks.txt` file for more into about various interesting casks.
+
+Run the cask install script
 
 ```bash
 zsh install-casks.zsh
 ```
 
-> IMPORTANT
-> Stick around during this process. You might need to to provide the login password for the computer during one or more installations.
-> This will take some time...
+> IMPORTANT!!!
+>
+> Stick around during this process. You might need to to provide the login password for the computer during one or more of these installations.
+> 
+> This will take some time...  get yourself a tea...
 
 
 ## iCloud
