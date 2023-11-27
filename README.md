@@ -101,12 +101,6 @@ zsh install-casks.zsh
 > This will take some time...  get yourself a tea...
 
 
-
-## Configure apps installed with Homebrew
-
-Now is a good time to open each app installed via Homebrew.  Open each app and access preferences with `cmd + ,`  Authorize each app if necessary and set preferences.
-
-
 ## Install Oh-My-Zsh
 
 Oh-My-Zsh is the quickest way to get a nice terminal experiance.  Install [Oh My Zsh](https://ohmyz.sh/)
@@ -340,9 +334,18 @@ in your `.bash_profile` or other configuration file.
 
 Then if you run `typora xxx.md` and `xxx.md` does not exists, Typora will pop up a dialog to ask you whether to create target file or cancel the operation.
 
+## Configure remaining apps installed with Homebrew
+
+Now is a good time to open each app installed via Homebrew.  Open each app and access preferences with `cmd + ,`  Authorize each app if necessary and set preferences.
 
 
-## Install Git, GitHub Git Credential Manager, GitHub CLI and GitHub Desktop
+## Setup Git and GitHub
+
+We need to get up and running with:
+- Git
+- GitHub Git Credential Manager
+- GitHub CLI
+- GitHub Desktop
 
 
 ### Install Git
