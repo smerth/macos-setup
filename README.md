@@ -18,7 +18,7 @@ Since git is not installed you will be prompted to install developer tools (sinc
 
 ## Download this repo
 
-Download the zip of this repo to your Downloads folder.
+Download the zip of this repo to your Downloads folder.  Then move it to the root of your `User` folder.
 
 ```shell
 cd ~/ && mv Downloads/macos-setup-main macos-setup
