@@ -1,4 +1,4 @@
-# Setup New Laptop
+# Setup New MacOS based computer for development with Node and Python
 
 This readme outlines how I setup a new MacOS for Node and Python development.  The repo contains some shell scripts to help speedup the process and some reference material to help clarify the steps.
 
