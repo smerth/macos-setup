@@ -1,10 +1,8 @@
 # Setup New MacOS based computer for development with Node and Python
 
-This readme outlines how I setup a new MacOS for Node and Python development.  The repo contains some shell scripts to help speedup the process and some reference material to help clarify the steps.
+This readme outlines how I setup a new MacOS for general use and for Node and Python development.  The repo contains some shell scripts to help speedup the process and some reference material to help clarify the steps.
 
-> **The Warp terminal has a lot of super-powers. We're going to use it until they begin charging a monthly subscription fee for it.  Then we are going to abandon it.  For now the super-power that will make setting up your MacOS easier is the fact you can open a markdown file in Warp.  If you do, any code blocks in the readme will be executable with a simple click.
-> To take advantage of that super-power to work through this readme you can do the following:**
-> -  Download the zip of this repo to your user root. (We haven't setup and configured git yet but you don't need it download a zip file from GitHub)
+
 > -  Install [Homebrew](https://brew.sh/)
 >   -  Run the terminal commands to finish the install
 > -  Install Warp terminal `brew install warp`
@@ -13,9 +11,81 @@ This readme outlines how I setup a new MacOS for Node and Python development.  T
 
 ## Install Developer Tools
 
-Since it takes a while start this now...
+Installing XCode is a painfully long wait and not necessary if all you need are the **developer tools**.  To initiate installation of just the tools without installing XCode just call git
 
-Installing XCode is a painfully long wait and not necessary if all you need are the developer tools.  To initiate installation of just the tools without installing XCode just type `git + return` into terminal.  Since git is not installed you will be prompted to install developer tools (since git comes with that package.) 
+```shell
+git
+```
+
+Since git is not installed you will be prompted to install developer tools (since git comes with that package.) 
+
+
+## Download this repo
+
+Download the zip of this repo to your Downloads folder.
+
+```shell
+cd ~/ && mv Downloads/macos-setup-main macos-setup
+```
+
+
+## Install Homebrew
+
+We will use [Homebrew](https://brew.sh/) to install the majority of our apps
+
+```shell
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
+Run any post install commands in terminal to finish the install
+
+
+## Install Warp Terminal
+
+```shell
+brew install warp
+```
+
+
+## Sign into and configure Warp
+
+- [x] login using GitHub
+- [x] Choose prompt
+- [x] Choose theme
+- [x] Choose the font and size
+- [x]     use the previously installed anonymice mono font @ size 22
+
+
+## Install fonts
+
+I like [Anonymous Pro Font](https://www.marksimonson.com/fonts/view/anonymous-pro) for VSCode and Terminal.  But I want the version with lots of icons so I use Anonymice from [Nerd Fonts](https://www.nerdfonts.com/font-downloads)
+
+Double click to open the archive and click on a font to open FontBook. Install the font then drag the remaining variants of the font to FontBook to install them.
+
+
+
+
+
+
+## Install casks (apps) with Homebrew
+
+In Homebrew parlance apps are called casks.  We are going to programatically install a number of casks back to back. To prepare for that first run
+
+```bash
+brew tap homebrew/cask-versions
+```
+
+Check the `cask-list` in `install-brew-casks` to make sure the apps you want to install are all there.  Decide whether you are using iTerminal or Warp as you terminal replacement. If you are using Warp you don't need oh-my-zsh.  Check the `useful-casks` file for more into about various interesting casks.
+
+Run the install script
+
+```bash
+zsh install-casks.zsh
+```
+
+> IMPORTANT
+> Stick around during this process. You might need to to provide the login password for the computer during one or more installations.
+> This will take some time...
+
 
 ## iCloud
 
@@ -56,40 +126,8 @@ Download any apps you need from the App Store. Click on your account in the stor
 - [x] Transmit
   - [x] Download from Panic (not the app store)
 
-## Install fonts
-
-I like [Anonymous Pro Font](https://www.marksimonson.com/fonts/view/anonymous-pro) for VSCode and Terminal.  But I want the version with lots if icons so download from [Nerd Fonts](https://www.nerdfonts.com/font-downloads)
-
-Double click to open the archive and click on a font to open FontBook. Install the font then drag the remaining variants of the font to FontBook to install them.
-
-## Install Homebrew
-
-[Homebrew](https://brew.sh/)
-
-- [x] Install homebrew
-- [x] Run the terminal commands to finish the install
-- [x] View `.zprofile ` to check it was created
 
 
-## Install casks (apps) with Homebrew
-
-In Homebrew parlance apps are called casks.  We are going to programatically install a number of casks back to back. To prepare for that first run
-
-```bash
-brew tap homebrew/cask-versions
-```
-
-Check the `cask-list` in `install-brew-casks` to make sure the apps you want to install are all there.  Decide whether you are using iTerminal or Warp as you terminal replacement. If you are using Warp you don't need oh-my-zsh.  Check the `useful-casks` file for more into about various interesting casks.
-
-Run the install script
-
-```bash
-zsh install-casks.zsh
-```
-
-> IMPORTANT
-> Stick around during this process. You might need to to provide the login password for the computer during one or more installations.
-> This will take some time...
 
 ## Configure apps installed with Homebrew
 
@@ -97,13 +135,7 @@ zsh install-casks.zsh
 
 Now is a good time to open each app installed via the App store, dragged in from a legacy apps folder or installed by Homebrew.  Open each app and access preferences with `cmd + ,`  Authorize each app if necessary and set preferences.
 
-### Configure Warp (terminal)
 
-- [x] login using GitHub
-- [x] Choose prompt
-- [x] Choose theme
-- [x] Choose the font and size
-- [x]     use the previously installed anonymice mono font @ size 22
 
 ### Install Oh-My-Zsh
 
