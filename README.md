@@ -183,17 +183,14 @@ nvm use 16 && npm install -g yarn
 
 **Configure NPM**
 
-- [x] add npmrc
+if you cd into an empty folder and run `npm init` or `yarn init` you will initiate a CLI to walk through setting up a project.  However the answers to each prompt will not be autofilled with your standard preferences.
 
-@ home
+Create an `.npmrc` file
 
 ```bash
 touch .npmrc
 ```
-
-- [x] Add yarnrc?
-
-@ home
+and add your preferences and authorization to download from and publish to GitHub package registry.
 
 ```bash
 init-author-name=Stephen Merth
@@ -202,10 +199,10 @@ init-author-url=https://smerth.github.io/
 init-license=MIT
 email=stephen.merth@gmail.com
 registry=https://registry.npmjs.org
-//registry.npmjs.org/:_authToken=AUTH_TOKEN
+//registry.npmjs.org/:_authToken=[AUTH_TOKEN_FOR_NPM_REGISTRY]
 @smerth:registry=https://npm.pkg.github.com/smerth
-//npm.pkg.github.com/:_authToken=AUTH_TOKEN
-//npm.pkg.github.com/smerth/:_authToken=AUTH_TOKEN
+//npm.pkg.github.com/:_authToken=[PAT_WITH_PERMISSIONS_FOR_GITHUB_PACKAGE_REGISTRY]
+//npm.pkg.github.com/smerth/:_authToken=[PAT_WITH_PERMISSIONS_FOR_GITHUB_PACKAGE_REGISTRY]
 always-auth=true
 scripts-prepend-node-path=true
 ```
