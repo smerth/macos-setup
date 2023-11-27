@@ -1,16 +1,15 @@
 # Setup New Laptop
 
-Setup a new Mac for web development.
+This readme outlines how I setup a new MacOS for Node and Python development.  The repo contains some shell scripts to help speedup the process and some reference material to help clarify the process.
 
-> **N.B. The Warp terminal has alot of nifty super-powers. So, we're going to use it until they begin charging a monthly subscription fee for it.  Then we are going to abandon it.  For now the super-power that will make setting up your MacOS easier is the fact you can open a markdown file in Warp.  If you do, any code blocks in the readme will be executable with a simple click.
+> **The Warp terminal has alot of nifty super-powers. So, we're going to use it until they begin charging a monthly subscription fee for it.  Then we are going to abandon it.  For now the super-power that will make setting up your MacOS easier is the fact you can open a markdown file in Warp.  If you do, any code blocks in the readme will be executable with a simple click.
 > To take advantage of that super-power to work through this readme you can do the following:**
-> -  Log in to Github on Safari.  Later we'll abondon Safari in favor of Firefox but for now log in to GitHub as this will be useful throughout.
-> -  Download the zip of this repo to your user root.
+> -  Download the zip of this repo to your user root. (We haven't setup and configured git yet but you don't need it download a zip file from GitHub)
 > -  Install [Homebrew](https://brew.sh/)
 >   -  Run the terminal commands to finish the install
->   -  View `.zprofile ` to check it was created
 > -  Install Warp terminal `brew install warp`
 > -  Open this README in Warp
+> Start clicking on code blocks to execute them
 
 
 
