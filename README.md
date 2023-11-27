@@ -2,11 +2,7 @@
 
 This readme outlines how I setup a new MacOS for general use and for Node and Python development.  The repo contains some shell scripts to help speedup the process and some reference material to help clarify the steps.
 
-
-> -  Install [Homebrew](https://brew.sh/)
->   -  Run the terminal commands to finish the install
-> -  Install Warp terminal `brew install warp`
-> -  Open this README in Warp and start clicking on code blocks to execute them
+If you follow these steps **sequentially without jumping around**, and trust we will cover all the major steps, it should be a fairly fast and efficient setup.
 
 
 ## Install Developer Tools
@@ -27,6 +23,13 @@ Download the zip of this repo to your Downloads folder.
 ```shell
 cd ~/ && mv Downloads/macos-setup-main macos-setup
 ```
+
+
+## Install a nice font for coding
+
+I like [Anonymous Pro Font](https://www.marksimonson.com/fonts/view/anonymous-pro) for use in VSCode and Terminal.  But I want the version with lots of icons so I [download the Anonymice Pro Font](https://github.com/ryanoasis/nerd-fonts/releases/download/v3.1.1/AnonymousPro.zip) from [Nerd Fonts](https://www.nerdfonts.com/font-downloads)
+
+Double click to open the archive and click on a font variant to open FontBook. Install the font then drag the remaining variants of the font into FontBook to install them.
 
 
 ## Install Homebrew
@@ -54,12 +57,6 @@ brew install warp
 - [x] Choose the font and size
 - [x]     use the previously installed anonymice mono font @ size 22
 
-
-## Install fonts
-
-I like [Anonymous Pro Font](https://www.marksimonson.com/fonts/view/anonymous-pro) for VSCode and Terminal.  But I want the version with lots of icons so I use Anonymice from [Nerd Fonts](https://www.nerdfonts.com/font-downloads)
-
-Double click to open the archive and click on a font to open FontBook. Install the font then drag the remaining variants of the font to FontBook to install them.
 
 
 
