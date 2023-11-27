@@ -11,9 +11,6 @@ This readme outlines how I setup a new MacOS for Node and Python development.  T
 > -  Open this README in Warp and start clicking on code blocks to execute them
 
 
-
-
-
 ## Install Developer Tools
 
 Since it takes a while start this now...
@@ -129,9 +126,12 @@ or
 ZSH_THEME="half-life"
 ```
 
-#### Install Oh-My-Zsh plugins
+### Install Oh-My-Zsh plugins
 
-**Install nvm via the zsh-nvm plugin**
+**zsh-nvm**
+
+zsh-nvm will install nvm as an Oh-My-Zsh plugin making it easy to update nvm and not mess up existing node and package installations.  In addition it will configure auto swithing the noe version listed in a `.nvmrc` file if present.
+
 Clone zsh-nvm into your custom plugins repo
 ```shell
 git clone https://github.com/lukechilds/zsh-nvm ~/.oh-my-zsh/custom/plugins/zsh-nvm
@@ -143,7 +143,7 @@ export NVM_AUTO_USE=true
 plugins+=(zsh-nvm)
 ```
 
-source `.zshrc`
+Reload the shell (source `.zshrc`)
 ```shell
 source .zshrc 
 ```
@@ -173,9 +173,7 @@ node --version && cd one && cd ../two && cd ../one && cd ../
 ```
 
 
-
-
-<u>zsh-syntax-highlighting</u>
+**zsh-syntax-highlighting**
 
 follow the install proceedure for 0h-my-zsh https://github.com/robbyrussell/oh-my-zsh
 
