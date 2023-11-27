@@ -172,14 +172,42 @@ check auto switching
 node --version && cd one && cd ../two && cd ../one && cd ../
 ```
 
-
 **zsh-syntax-highlighting**
 
-follow the install proceedure for 0h-my-zsh https://github.com/robbyrussell/oh-my-zsh
+Setup syntax highlighting for Terminal and iTerm2 if you use them (I can't get it to work with Warp)
 
-<u>zsh-autosuggestions</u>
+Follow [install directions for Oh-My-Zsh]([https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md](https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md#oh-my-zsh))
 
-follow the install proceedure for 0h-my-zsh https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md#oh-my-zsh
+Clone this repository in oh-my-zsh's plugins directory:
+```shell
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+```
+Activate the plugin in ~/.zshrc:
+```shell
+plugins=( [plugins...] zsh-syntax-highlighting)
+```
+Restart zsh (such as by opening a new instance of your terminal emulator).
+
+
+**zsh-autosuggestions**
+
+Follow the install for [install for Oh-My-Zsh](https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md#oh-my-zsh)
+
+Clone this repository into `$ZSH_CUSTOM/plugins` (by default `~/.oh-my-zsh/custom/plugins`)
+```shell
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+```
+
+Add the plugin to the list of plugins for Oh My Zsh to load (inside ~/.zshrc):
+```shell
+plugins=( 
+    # other plugins...
+    zsh-autosuggestions
+)
+```
+
+Start a new terminal session.
+
 
 
 
