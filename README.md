@@ -104,12 +104,10 @@ zsh install-casks.zsh
 
 ## Configure apps installed with Homebrew
 
-### Open each app you have installed
-
 Now is a good time to open each app installed via Homebrew.  Open each app and access preferences with `cmd + ,`  Authorize each app if necessary and set preferences.
 
 
-### Install Oh-My-Zsh
+## Install Oh-My-Zsh
 
 Oh-My-Zsh is the quickest way to get a nice terminal experiance.  Install [Oh My Zsh](https://ohmyz.sh/)
 
