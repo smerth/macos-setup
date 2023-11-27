@@ -172,6 +172,52 @@ check auto switching
 node --version && cd one && cd ../two && cd ../one && cd ../
 ```
 
+**Install Yarn**
+```shell
+nvm use 18 && npm install -g yarn
+```
+and 
+```shell
+nvm use 16 && npm install -g yarn
+```
+
+**Configure NPM**
+
+- [x] add npmrc
+
+@ home
+
+```bash
+touch .npmrc
+```
+
+- [x] Add yarnrc?
+
+@ home
+
+```bash
+init-author-name=Stephen Merth
+init-author-email=stephen.merth@gmail.com
+init-author-url=https://smerth.github.io/
+init-license=MIT
+email=stephen.merth@gmail.com
+registry=https://registry.npmjs.org
+//registry.npmjs.org/:_authToken=AUTH_TOKEN
+@smerth:registry=https://npm.pkg.github.com/smerth
+//npm.pkg.github.com/:_authToken=AUTH_TOKEN
+//npm.pkg.github.com/smerth/:_authToken=AUTH_TOKEN
+always-auth=true
+scripts-prepend-node-path=true
+```
+
+
+
+
+
+
+
+
+
 **zsh-syntax-highlighting**
 
 Setup syntax highlighting for Terminal and iTerm2 if you use them (I can't get it to work with Warp)
@@ -390,101 +436,7 @@ gh config set editor "nano --wait"
 
 ## NodeJS
 
-### Nvm
 
-Homebrew installation is not supported. If you have issues with homebrew-installed nvm, please brew uninstall it, and install it using the instructions below, before filing an issue.
-
-Note: If you're using zsh you can easily install nvm as a zsh plugin. Install zsh-nvm and run nvm upgrade to upgrade. (Check the long list of options in the project readme.)
-
-We are going to install nvm following the instructions on the [nvm project page on GitHub](https://github.com/nvm-sh/nvm)
-
-- [x] install using the script on the nvm GitHub page
-
-
-### Install Node Versions
-
-Install Node 16 and 18 to support your legacy GitHub projects
-
-**Install Node v18**
-```shell
-nvm install 18
-```
-
-**Install Node v16**
-```shell
-nvm install 16
-```
-
-**Test manually switching between Node versions**
-```shell
-nvm use 16 && nvm use 18
-```
-
-### Install global packages
-
-Globally installed packages are installed for each environment (eg: 18 and 16) separately. The NPM package is an example.  If you use Node v16 and check NPM it should be an older version than the one used with Node 18.  Either version of NPM might require an update.
-
-**Update NPM**
-```shell
-npm install -g npm
-```
-
-**Install Yarn**
-```shell
-nvm use 18 && npm install -g npm
-```
-and 
-```shell
-nvm use 16 && npm install -g npm
-```
-
-### Automatic Node Version Switching with AVN
-
-Following the instructions on the GitHub project page you can add a snippet to `.zshrc` to auto-load the version of node specified in `.nvmrc`
-
-However [Automatic Version Switching for Node.js](https://github.com/wbyoung/avn) seems like a cleaner way to go it switches to the version of Node defined in `.nvmrc` in a new dircetory, upon entering the directory, if `.nvmrc` exists.
-
-**Install**
-```shell
-npm install -g avn avn-nvm avn-n
-```
-
-**Setup**
-```shell
-avn setup
-```
-
-
-
-
-### Configure NPM
-
-- [x] add npmrc
-
-@ home
-
-```bash
-touch .npmrc
-```
-
-- [x] Add yarnrc?
-
-@ home
-
-```bash
-init-author-name=Stephen Merth
-init-author-email=stephen.merth@gmail.com
-init-author-url=https://smerth.github.io/
-init-license=MIT
-email=stephen.merth@gmail.com
-registry=https://registry.npmjs.org
-//registry.npmjs.org/:_authToken=AUTH_TOKEN
-@smerth:registry=https://npm.pkg.github.com/smerth
-//npm.pkg.github.com/:_authToken=AUTH_TOKEN
-//npm.pkg.github.com/smerth/:_authToken=AUTH_TOKEN
-always-auth=true
-scripts-prepend-node-path=true
-```
 
 ### Test the Node setup
 
