@@ -486,9 +486,18 @@ conda deactivate
 ```
 To view a list of environments
 ```shell
-conda list
+conda env list
 ```
 
+Get help with environments
+```shell
+conda env --help
+```
+
+Get help with conda
+```shell
+conda --help
+```
 
 ### Anaconda Overview
 [Learning Anaconda](https://learning.anaconda.cloud/path/intro-to-python)
