@@ -458,49 +458,44 @@ We're going to use Anaconda to setup and manage Python environments.  Anaconda c
 
 Download the [Anaconda Free Distribution](https://www.anaconda.com/download) and use the installer.  Don't use Homebrew to install Anaconda.  The installer offers more control over the placement of files.
 
+Check that `.bash_profile` has been created.  Since we're running zsh, copy the conda init script from `.bash_profile` to `.zprofile`
 
+Reopen Warp.  If Everything worked your prompt should begin with `base` which indicated you are currently using the base python installation.
 
-
-
-> Check your dotfiles. Anaconda installs a `.bash_profile` with a script to initialize conda. To keep the dotfiles clean and because you are using zsh instead of bash, copy the block to the `.zprofile`. Check the terminal prompt which should show the current python environment (base by default.)
 
 ### Set up Python Environments
 
 Now use condo to install python versions in their own environments
-
 ```bash
 conda create --name py310
 ```
 
 To activate this environment
-
 ```bash
 conda activate py310
 ```
 
 Install a specific python version in this environment
-
 ```bash
 conda install python=3.10
 ```
 
 To deactivate an active environment
-
 ```bash
 conda deactivate
 ```
+To view a list of environments
+```shell
+conda list
+```
+
 
 ### Anaconda Overview
-
 [Learning Anaconda](https://learning.anaconda.cloud/path/intro-to-python)
 
 ### Uninstall Anaconda
-
 [Remove environments](https://www.freecodecamp.org/news/how-to-delete-an-environment-in-conda/)
-
 [Uninstall Anaconda](https://docs.anaconda.com/free/anaconda/install/uninstall/)
-
-
 
 
 ## iCloud
