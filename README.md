@@ -460,7 +460,7 @@ Download the [Anaconda Free Distribution](https://www.anaconda.com/download) and
 
 Check that `.bash_profile` has been created.  Since we're running zsh, copy the conda init script from `.bash_profile` to `.zprofile`.  You can delete `.bash_profile`
 
-Reopen Warp.  If Everything worked your prompt should begin with `base` which indicated you are currently using the base python installation.
+Reopen Warp.  If everything worked your prompt should begin with `base` which indicated you are currently using the base python installation.
 
 
 ### Set up Python Environments
