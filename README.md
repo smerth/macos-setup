@@ -458,7 +458,7 @@ We're going to use Anaconda to setup and manage Python environments.  Anaconda c
 
 Download the [Anaconda Free Distribution](https://www.anaconda.com/download) and use the installer.  Don't use Homebrew to install Anaconda.  The installer offers more control over the placement of files.
 
-Check that `.bash_profile` has been created.  Since we're running zsh, copy the conda init script from `.bash_profile` to `.zprofile`
+Check that `.bash_profile` has been created.  Since we're running zsh, copy the conda init script from `.bash_profile` to `.zprofile`.  You can delete `.bash_profile`
 
 Reopen Warp.  If Everything worked your prompt should begin with `base` which indicated you are currently using the base python installation.
 
