@@ -328,13 +328,13 @@ You can also add
 ```
 alias tp="open -a typora"
 ```
-in your `.bash_profile` or `.zprofile` other configuration file, then you would be able to simply type `typora xxx.md` instead.
+in your `.zprofile` file, then you would be able to simply type `typora xxx.md` instead.
 
 (Requires Typora ≥ 1.1) If you want to use command line to not only open existing files, but also creating new files when target `.md` file does not exists, you could add
 ```
 alias typora="/Applications/Typora.app/Contents/MacOS/Typora"
 ```
-in your `.bash_profile` or other configuration file.
+in your `.zprofile` or other configuration file.
 
 Then if you run `typora xxx.md` and `xxx.md` does not exists, Typora will pop up a dialog to ask you whether to create target file or cancel the operation.
 
