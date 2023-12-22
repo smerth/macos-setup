@@ -248,6 +248,7 @@ scripts-prepend-node-path=true
 
 
 ## Configure iTerm2
+If you are using iTerm2, now is the time to configure it to your liking...
 
 **Set theme**
 
