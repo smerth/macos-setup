@@ -185,6 +185,8 @@ source .zshrc
 ```
 
 **Install two versions of node**
+
+
 Install Node at version 18
 ```shell
 nvm install 18
@@ -193,6 +195,7 @@ Install Node at version 16
 ```shell
 nvm install 16
 ```
+
 
 **Test auto-switching between Node versions**
 To make sure all previous changes take effect close out your terminal shell and re-open a fresh one
