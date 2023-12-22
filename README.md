@@ -264,7 +264,7 @@ If you are using iTerm2, now is the time to configure it to your liking...
 
 **Choose a font**
 
-- [ ] `settings > profiles > text > font` set to "Anonymous Pro Font" or "AnonymicePro Font" for the Nerd Font version with the icons
+- [ ] @ `settings > profiles > text > font` set to "AnonymicePro Font"
 - [ ] set font size to "22"
 
 **Load new tabs and windows in previous location**
@@ -279,9 +279,9 @@ If you are using iTerm2, now is the time to configure it to your liking...
 ## Configure VSCode
 
 - [ ] Turn on settings sync (syncs settings with Github account)
-- [ ] Under turn on "linked tag editing" in: settings > linked editing
+- [ ] Turn on "linked tag editing" @ settings > linked editing
 
-#### Install extensions
+### Install extensions
 
 If you synched settings for VSCode from a previous install this won't be necessary.
 
