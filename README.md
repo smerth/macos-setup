@@ -166,7 +166,7 @@ We are going to install Node using nvm so we easily manage Node versions.  We ar
 
 **zsh-nvm**
 
-zsh-nvm will install nvm as an Oh-My-Zsh plugin making it easy to update nvm and not mess up existing node and package installations.  In addition it will configure auto swithing the noe version listed in a `.nvmrc` file if present.
+zsh-nvm will install nvm as an Oh-My-Zsh plugin making it easy to update nvm and not mess up existing node and package installations.  In addition it will configure auto swithing the node version listed in a `.nvmrc` file if present.
 
 Clone zsh-nvm into your custom plugins repo
 ```shell
