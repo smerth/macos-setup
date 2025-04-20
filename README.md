@@ -4,8 +4,19 @@ This readme outlines how I setup a new MacOS for general use and for Node and Py
 
 If you follow these steps **sequentially without jumping around**, and trust we will cover all the major steps, it should be a fairly fast and efficient setup.
 
+
 ## First Steps
 
+Lets do a couple of things that will make this whole process a bit easier.
+
+### Download this repo
+
+Since we haven't set up Git on your new computer you can't clone repos yet.  Instead download the **zip** of this repo to your Downloads folder.  Then move it to the root of your `User` folder.
+
+```shell
+cd ~/ && mv Downloads/macos-setup-main macos-setup
+```
+Now you can cd into this repo locally to run scripts in terminal.
 
 ### Install Developer Tools
 
@@ -19,16 +30,6 @@ Since git is not installed you will be prompted to install developer tools (sinc
 
 Alternatively you can install xCode from the Apple store.
 
-
-### Download this repo
-
-Since we haven't set up Git on your new computer you can't clone repos yet.  Instead download the **zip** of this repo to your Downloads folder.  Then move it to the root of your `User` folder.
-
-```shell
-cd ~/ && mv Downloads/macos-setup-main macos-setup
-```
-Now you can cd into this repo locally to run scripts in terminal.
-
 ### Install fonts
 
 I like [Anonymous Pro Font](https://www.marksimonson.com/fonts/view/anonymous-pro) for use in VSCode and Terminal.  But I want the version with lots of icons so I [download the Anonymice Pro Font](https://github.com/ryanoasis/nerd-fonts/releases/download/v3.1.1/AnonymousPro.zip) from [Nerd Fonts](https://www.nerdfonts.com/font-downloads)
@@ -37,13 +38,23 @@ Double click to open the archive and click on a font variant to open FontBook. I
 
 This might be good time to install any other fonts you like to use.  Its good to have to available for use when configuring apps later.
 
-## Install previously purchased apps
+### Install Homebrew
 
-### Install and configure Password Manager app
+We will use [Homebrew](https://brew.sh/) to install apps used for coding.  Open terminal and run the installation script
 
-Install and configure are your chosen **password manager** and your **MFA app**, if you use one.
+```shell
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
+Run any post install commands in terminal to finish the install
 
-Since you will be configuring apps, services and logging into websites you will want quick and easy access to all you passwords.
+
+## Install apps
+
+### Install a Password Manager and MFA app
+
+Install and configure your chosen **password manager** and your **MFA app**, if you use one.
+
+Since you will be configuring apps, services and logging into websites you will want quick and easy access to all you passwords.  It may be tedious but best to do this now.
 
 
 
@@ -64,14 +75,7 @@ There is nothing more anoying than jumping into some productivity app on your ne
 
 ## Install Apps with Homebrew
 
-### Install Homebrew
 
-We will use [Homebrew](https://brew.sh/) to install apps used for coding.  Open terminal and run the installation script
-
-```shell
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-```
-Run any post install commands in terminal to finish the install
 
 ### Install apps with Homebrew
 
