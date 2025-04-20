@@ -24,7 +24,7 @@ Now you can cd into this repo locally to run scripts in terminal.
 
 Install and configure your chosen **password manager** and your **MFA app**, if you use one.
 
-Since you will be configuring apps, services and logging into websites you will want quick and easy access to all you passwords.  It may be tedious but best to do this now.
+Since you will be configuring apps, services and logging into websites you will want quick and easy access to all you passwords.
 
 ### Install Developer Tools
 
