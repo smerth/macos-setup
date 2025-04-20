@@ -1,11 +1,13 @@
-# Setup New MacOS based computer for development with Node and Python
+# Setup New MacOS computer for development with Node and Python
 
 This readme outlines how I setup a new MacOS for general use and for Node and Python development.  The repo contains some shell scripts to help speed-up the process and some reference material to help clarify the steps.
 
 If you follow these steps **sequentially without jumping around**, and trust we will cover all the major steps, it should be a fairly fast and efficient setup.
 
+## First Steps
 
-## Install Developer Tools
+
+### Install Developer Tools
 
 Installing XCode is a painfully long wait and not necessary if all you need are the **developer tools**.  To initiate installation of just the tools without installing XCode just call git
 
@@ -15,31 +17,70 @@ git
 
 Since git is not installed you will be prompted to install developer tools (since git comes with that package.) 
 
+Alternatively you can install xCode from the Apple store.
 
-## Download this repo
 
-Download the zip of this repo to your Downloads folder.  Then move it to the root of your `User` folder.
+### Download this repo
+
+Since we haven't set up Git on your new computer you can't clone repos yet.  Instead download the **zip** of this repo to your Downloads folder.  Then move it to the root of your `User` folder.
 
 ```shell
 cd ~/ && mv Downloads/macos-setup-main macos-setup
 ```
+Now you can cd into this repo locally to run scripts in terminal.
 
-
-## Install a nice font for coding
+### Install fonts
 
 I like [Anonymous Pro Font](https://www.marksimonson.com/fonts/view/anonymous-pro) for use in VSCode and Terminal.  But I want the version with lots of icons so I [download the Anonymice Pro Font](https://github.com/ryanoasis/nerd-fonts/releases/download/v3.1.1/AnonymousPro.zip) from [Nerd Fonts](https://www.nerdfonts.com/font-downloads)
 
 Double click to open the archive and click on a font variant to open FontBook. Install the font then drag the remaining variants of the font into FontBook to install them.
 
+This might be good time to install any other fonts you like to use.  Its good to have to available for use when configuring apps later.
 
-## Install Homebrew
+## Install previously purchased apps
 
-We will use [Homebrew](https://brew.sh/) to install the majority of our apps
+### Install and configure Password Manager app
+
+Install and configure are your chosen **password manager** and your **MFA app**, if you use one.
+
+Since you will be configuring apps, services and logging into websites you will want quick and easy access to all you passwords.
+
+
+
+### Install apps from Apple app store
+
+You probably have some apps you purchased through the Apple app store.  Now is a good time to install them
+
+### Copy over apps from other sources
+
+If you have apps from your old computer or other sources now is the time to get them onto your new Mac.
+
+### Conigure your purchased apps
+
+Open all the apps on your computer.  Sign-in if necessary and click through the startup windows.  
+
+There is nothing more anoying than jumping into some productivity app on your new computer and having to go through all the start-up windows.
+
+
+## Install Apps with Homebrew
+
+### Install Homebrew
+
+We will use [Homebrew](https://brew.sh/) to install apps used for coding.  Open terminal and run the installation script
 
 ```shell
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 Run any post install commands in terminal to finish the install
+
+### Install apps with Homebrew
+
+
+
+
+
+
+
 
 
 ## Install Warp Terminal
