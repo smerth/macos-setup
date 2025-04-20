@@ -36,7 +36,7 @@ git
 
 Since git is not installed you will be prompted to install developer tools (since git comes with that package.) 
 
-Alternatively you can install xCode from the Apple store.
+Alternatively you can install XCode from the Apple store.
 
 ### Install fonts
 
