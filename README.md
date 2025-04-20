@@ -1,6 +1,8 @@
-# Setup New MacOS computer for development with Node and Python
+# Setup new MacOS computer for development with Node and Python
 
-This readme outlines how I setup a new MacOS for general use and for Node and Python development.  The repo contains some shell scripts to help speed-up the process and some reference material to help clarify the steps.
+This readme outlines how I setup a new Apple computer for general use and for Node and Python development.  I am logging into iCloud and syncing the new computer to my account but I not setting up the new computer from an existing computer.  Instead I am setting up from scratch. 
+
+The repo contains some shell scripts to help speed-up the process and some reference material to help clarify the steps.
 
 If you follow these steps **sequentially without jumping around**, and trust we will cover all the major steps, it should be a fairly fast and efficient setup.
 
@@ -17,6 +19,12 @@ Since we haven't set up Git on your new computer you can't clone repos yet.  Ins
 cd ~/ && mv Downloads/macos-setup-main macos-setup
 ```
 Now you can cd into this repo locally to run scripts in terminal.
+
+### Install a Password Manager and MFA app
+
+Install and configure your chosen **password manager** and your **MFA app**, if you use one.
+
+Since you will be configuring apps, services and logging into websites you will want quick and easy access to all you passwords.  It may be tedious but best to do this now.
 
 ### Install Developer Tools
 
@@ -36,25 +44,27 @@ I like [Anonymous Pro Font](https://www.marksimonson.com/fonts/view/anonymous-pr
 
 Double click to open the archive and click on a font variant to open FontBook. Install the font then drag the remaining variants of the font into FontBook to install them.
 
-This might be good time to install any other fonts you like to use.  Its good to have to available for use when configuring apps later.
+This might be good time to install any other fonts you like to use.  Its good to have them available for use when configuring apps later.
 
 ### Install Homebrew
 
-We will use [Homebrew](https://brew.sh/) to install apps used for coding.  Open terminal and run the installation script
+We will use [Homebrew](https://brew.sh/) to install apps.  Open terminal and run the installation script
 
 ```shell
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 Run any post install commands in terminal to finish the install
 
+### Sign into YouTube
+
+I you have a YouTube subscription, to avoid advertisng, sign in now so you can consult videos along the way to clarify anything that seems unclear.
+
+### Set MacOS preferences
+
+Open up System settings and starting at the top go through each item and set your preferences.  If you are starting from scratch instead of syncing up from an existing computer this may seem tedious but I like to do this upfront instead of tweaking settings as I use MacOS because it gives me chance to review what the OS offers in the way of options and I always fond something new along the way.
+
 
 ## Install apps
-
-### Install a Password Manager and MFA app
-
-Install and configure your chosen **password manager** and your **MFA app**, if you use one.
-
-Since you will be configuring apps, services and logging into websites you will want quick and easy access to all you passwords.  It may be tedious but best to do this now.
 
 
 
