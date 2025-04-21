@@ -150,9 +150,9 @@ Use opt + arrow to move across tokens in a text string:
 
 - [ ] @ `Preferences > Profiles > Keys > Key Mapping > Presets` set to "Natural Text Editing"
 
-#### Oh-My-Zsh
+#### Oh My Zsh
 
-Most people who install oh-my-zsh seem to do so for the attractive interface options, thats all good.  I will install it because the plugin system can be used to install lots useful tools.  In particular I will use Oh-My-Zsh plugins to install Node down below.
+Oh My Zsh is known for making the terminal look pretty.  But it also has a great plugin system.  I will use Oh My Zsh plugins to install Node down below.
 
 **Install [Oh My Zsh](https://ohmyz.sh/)**
 
@@ -179,15 +179,15 @@ or
 ZSH_THEME="half-life"
 ```
 
-### Install Oh-My-Zsh plugins
+### Install Oh My Zsh plugins
 
 **zsh-syntax-highlighting**
 
 Setup syntax highlighting for Terminal and iTerm2 if you use them (I can't get it to work with Warp)
 
-Follow [install directions for Oh-My-Zsh]([https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md](https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md#oh-my-zsh))
+Follow [install directions for Oh My Zsh]([https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md](https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md#oh-my-zsh))
 
-Clone this repository in oh-my-zsh's plugins directory:
+Clone this repository in Oh My Zsh's plugins directory:
 ```shell
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 ```
@@ -200,7 +200,7 @@ Restart zsh (such as by opening a new instance of your terminal emulator).
 
 **zsh-autosuggestions**
 
-Follow the install for [install for Oh-My-Zsh](https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md#oh-my-zsh)
+Follow the install for [install for Oh My Zsh](https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md#oh-my-zsh)
 
 Clone this repository into `$ZSH_CUSTOM/plugins` (by default `~/.oh-my-zsh/custom/plugins`)
 ```shell
