@@ -116,12 +116,12 @@ Open each app and login or set your preferences.  Add apps to the dock or the me
 
 ## Configure an alternative terminal
 
-Using the default terminal app that comes with MacOS can be bit tedious.  This is how I set up iTerm2 and Warp as alternatives. 
+Using the default **Terminal** app that comes with MacOS can be bit tedious.  This is how I set up **iTerm2** and **Warp** as alternatives. 
 
-> IMPORTANT!
-> Now that we are on the subject of terminals your first instinct will be to start tweaking out the look and feel of iTerm2 or Warp or Terminal.  Resist that impulse. Just do some basic config now and wait until we start to set up Node.
 
 ### iTerm2
+
+#### Basic setup
 
 **Set theme**
 
@@ -140,13 +140,82 @@ Using the default terminal app that comes with MacOS can be bit tedious.  This i
 - [ ] @ `settings > profiles > text > font` set to "AnonymicePro Font"
 - [ ] set font size to "22"
 
-**Load new tabs and windows in previous location**
+**Set preferences**
+
+Load new tabs and windows in previous location:
 
 - [ ] @ `Preferences > Profiles > General > Working Directory` set to "Reuse previous sessions directory"
 
-**Use opt + arrow to move across tokens in a text string**
+Use opt + arrow to move across tokens in a text string:
 
 - [ ] @ `Preferences > Profiles > Keys > Key Mapping > Presets` set to "Natural Text Editing"
+
+#### Oh-My-Zsh
+
+Most people who install oh-my-zsh seem to do so for the attractive interface options, thats all good.  I will install it because the plugin system can be used to install lots useful tools.  In particular I will use Oh-My-Zsh plugins to install Node down below.
+
+**Install [Oh My Zsh](https://ohmyz.sh/)**
+
+```bash
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+```
+
+**Change the theme**
+
+Change theme in the `.zshrc` file.  If you use iTerm2 you can choose freely from any on the available themes.  However, if you use Warp you need to choose a theme with a relatively clean prompt since Warp adds alot of formatting to the prompt and the history blocks of previously executed code.
+
+Open the `.zshrc` file.
+
+```bash
+cd ~/
+```
+
+Try: 
+```shell
+ZSH_THEME="af-magic"
+```
+or 
+```shell
+ZSH_THEME="half-life"
+```
+
+### Install Oh-My-Zsh plugins
+
+**zsh-syntax-highlighting**
+
+Setup syntax highlighting for Terminal and iTerm2 if you use them (I can't get it to work with Warp)
+
+Follow [install directions for Oh-My-Zsh]([https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md](https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md#oh-my-zsh))
+
+Clone this repository in oh-my-zsh's plugins directory:
+```shell
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+```
+Activate the plugin in ~/.zshrc:
+```shell
+plugins=( [plugins...] zsh-syntax-highlighting)
+```
+Restart zsh (such as by opening a new instance of your terminal emulator).
+
+
+**zsh-autosuggestions**
+
+Follow the install for [install for Oh-My-Zsh](https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md#oh-my-zsh)
+
+Clone this repository into `$ZSH_CUSTOM/plugins` (by default `~/.oh-my-zsh/custom/plugins`)
+```shell
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+```
+
+Add the plugin to the list of plugins for Oh My Zsh to load (inside ~/.zshrc):
+```shell
+plugins=( 
+    # other plugins...
+    zsh-autosuggestions
+)
+```
+
+Start a new terminal session.
 
 
 ### Warp
@@ -230,64 +299,7 @@ Then if you run `typora xxx.md` and `xxx.md` does not exists, Typora will pop up
 
 
 
-## Install Oh-My-Zsh
 
-Oh-My-Zsh is the quickest way to get a nice terminal experiance.  Install [Oh My Zsh](https://ohmyz.sh/)
-
-```bash
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-```
-
-**Change the theme**
-
-Change theme in the `.zshrc` file.  If you use iTerm2 you can choose freely from any on the available themes.  However, if you use Warp you need to choose a theme with a relatively clean prompt since Warp adds alot of formatting to the prompt and the history blocks of previously executed code.
-
-Try: 
-```shell
-ZSH_THEME="af-magic"
-```
-or 
-```shell
-ZSH_THEME="half-life"
-```
-
-### Install Oh-My-Zsh plugins
-
-**zsh-syntax-highlighting**
-
-Setup syntax highlighting for Terminal and iTerm2 if you use them (I can't get it to work with Warp)
-
-Follow [install directions for Oh-My-Zsh]([https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md](https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md#oh-my-zsh))
-
-Clone this repository in oh-my-zsh's plugins directory:
-```shell
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
-```
-Activate the plugin in ~/.zshrc:
-```shell
-plugins=( [plugins...] zsh-syntax-highlighting)
-```
-Restart zsh (such as by opening a new instance of your terminal emulator).
-
-
-**zsh-autosuggestions**
-
-Follow the install for [install for Oh-My-Zsh](https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md#oh-my-zsh)
-
-Clone this repository into `$ZSH_CUSTOM/plugins` (by default `~/.oh-my-zsh/custom/plugins`)
-```shell
-git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
-```
-
-Add the plugin to the list of plugins for Oh My Zsh to load (inside ~/.zshrc):
-```shell
-plugins=( 
-    # other plugins...
-    zsh-autosuggestions
-)
-```
-
-Start a new terminal session.
 
 ## Setup Node.js
 
