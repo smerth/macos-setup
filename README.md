@@ -64,84 +64,37 @@ I you have a YouTube subscription, to avoid advertisng, sign in now so you can c
 Open up System settings and starting at the top go through each item and set your preferences.  If you are starting from scratch instead of syncing up from an existing computer this may seem tedious but I like to do this upfront instead of tweaking settings as I use MacOS because it gives me chance to review what the OS offers in the way of options and I always fond something new along the way.
 
 
-## Install apps
-
-
+## Install previously purchased apps
 
 ### Install apps from Apple app store
 
-You probably have some apps you purchased through the Apple app store.  Now is a good time to install them
+You probably have some apps you purchased through the Apple app store.  Now is a good time to install them.  To find a list of your previously purchased apps open the app store and click on the account name.
 
 ### Copy over apps from other sources
 
 If you have apps from your old computer or other sources now is the time to get them onto your new Mac.
 
-### Conigure your purchased apps
+### Configure your purchased apps
 
-Open all the apps on your computer.  Sign-in if necessary and click through the startup windows.  
-
-There is nothing more anoying than jumping into some productivity app on your new computer and having to go through all the start-up windows.
+Open all the apps on your computer.  Sign-in if necessary and click through the startup windows so the app is ready to use the next time you open it.
 
 
-## Install Apps with Homebrew
+## Install apps with Homebrew
 
+Homebrew is the defacto package manager for MacOS.  Packages are app you can install on your computer.  You interact with Homebrew from the command line in terminal. An app can have several versions.  A version of an app is stored in a "cask".
 
-
-### Install apps with Homebrew
-
-
-
-
-
-
-
-
-
-## Install Warp Terminal
-
-```shell
-brew install warp
-```
-
-
-## Sign into Warp
-
-- [ ] First login to your Github account in the web browser
-- [ ] Login to Warp using your GitHub account (you'll be redirected to GitHub in the Browser)
-
-
-## Configure Warp
-
-- [ ] Choose prompt
-- [ ] Choose theme
-- [ ] Choose the font (use the previously installed **Anonymice Pro Mono** font)
-- [ ] Set font size to "22"
-
-
-## Open This readme in Warp
-
-You can open a markdown file in Warp, then you can execute any code blocks in the markdown by clicking on the code block. This will make moving through this readme much faster than cutting and pasting code into terminal.
-
-```shell
-cd ~/macos-setup && open README.md -a warp
-```
-
-
-## Install casks (apps) with Homebrew
-
-In Homebrew parlance apps are called casks.  We are going to programatically install a number of casks back to back. To prepare for that first run this command it will download the list of versions for all casks.  we need this because we will install some versions of casks that are off the main release (eg. Firefox Developer Edition)
-
-```bash
-brew tap homebrew/cask-versions
-```
+### Review cask-list
 
 Open and read the list of casks to be installed.
 
 ```shell
 cd install-brew-casks && open cask-list.txt -a textedit
 ```
+This repo contains the file `cask-list.txt` in the folder `install-brew-casks`.  Open it up and add or delete apps to install with Homebrew.  Find other interesesting apps to install with Homebrew in the file `useful-casks.csv` or Google to find out what other people are running.
 
-- [ ] Check `cask-list.txt` to make sure the apps you want to install are all there.  Add or subtract apps as you see fit. Check the `useful-casks.txt` file for more into about various interesting casks.
+### Install casks (apps) with Homebrew
+
+We will programatically install the apps in `cask-list.txt` back to back using a script.
 
 Run the cask install script
 
@@ -149,7 +102,7 @@ Run the cask install script
 zsh install-casks.zsh
 ```
 
-> IMPORTANT!!!
+> **IMPORTANT!!!**
 >
 > Stick around during this process. You might need to to provide the login password for the computer during one or more of these installations.
 > 
