@@ -109,6 +109,50 @@ zsh install-casks.zsh
 > This will take some time...  get yourself a tea...
 
 
+## Configure apps installed with Homebrew
+
+Open each app and login or set your preferences.  Add apps to the dock or the menu bar according to your preference.  
+
+Here is how I configure some of the apps I use most frequently for coding.
+
+### VSCode
+
+- [ ] Turn on settings sync (syncs settings with Github account)
+- [ ] Turn on "linked tag editing" @ settings > linked editing
+
+### Install extensions
+
+If you synched settings for VSCode from a previous install this won't be necessary.
+
+Current Favorites:
+
+- [ ] Just Black + comments (theme)
+- [ ] Font size shortcuts
+- [ ] GitHub Copilot (requires subscription)
+- [ ] GitLens
+- [ ] Jupyter
+- [ ] Python
+- [ ] Rainbow CSV
+- [ ] Prettier
+- [ ] Vscode icons
+- [ ] live server
+- [ ] vsc-nvm
+
+Consider:
+
+- [ ] ES7+ snippets (dsznajder)
+- [ ] Vetur (for vue)
+- [ ] Indent rainbow
+- [ ] Todo highlight
+- [ ] Version lens
+- [ ] Import cost
+- [ ] Debugger for chrome (and also does Firefox)
+- [ ] rest client
+
+
+
+
+
 ## Install Oh-My-Zsh
 
 Oh-My-Zsh is the quickest way to get a nice terminal experiance.  Install [Oh My Zsh](https://ohmyz.sh/)
@@ -284,39 +328,7 @@ If you are using iTerm2, now is the time to configure it to your liking...
 - [ ] @ `Preferences > Profiles > Keys > Key Mapping > Presets` set to "Natural Text Editing"
 
 
-## Configure VSCode
 
-- [ ] Turn on settings sync (syncs settings with Github account)
-- [ ] Turn on "linked tag editing" @ settings > linked editing
-
-### Install extensions
-
-If you synched settings for VSCode from a previous install this won't be necessary.
-
-Current Favorites:
-
-- [ ] Just Black + comments (theme)
-- [ ] Font size shortcuts
-- [ ] GitHub Copilot (requires subscription)
-- [ ] GitLens
-- [ ] Jupyter
-- [ ] Python
-- [ ] Rainbow CSV
-- [ ] Prettier
-- [ ] Vscode icons
-- [ ] live server
-- [ ] vsc-nvm
-
-Consider:
-
-- [ ] ES7+ snippets (dsznajder)
-- [ ] Vetur (for vue)
-- [ ] Indent rainbow
-- [ ] Todo highlight
-- [ ] Version lens
-- [ ] Import cost
-- [ ] Debugger for chrome (and also does Firefox)
-- [ ] rest client
 
 ## Configure Firefox Developer
 
