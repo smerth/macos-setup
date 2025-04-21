@@ -113,14 +113,75 @@ zsh install-casks.zsh
 
 Open each app and login or set your preferences.  Add apps to the dock or the menu bar according to your preference.  
 
-Here is how I configure some of the apps I use most frequently for coding.
+
+## Configure an alternative terminal
+
+Using the default terminal app that comes with MacOS can be bit tedious.  This is how I set up iTerm2 and Warp as alternatives. 
+
+> IMPORTANT!
+> Now that we are on the subject of terminals your first instinct will be to start tweaking out the look and feel of iTerm2 or Warp or Terminal.  Resist that impulse. Just do some basic config now and wait until we start to set up Node.
+
+### iTerm2
+
+**Set theme**
+
+- [ ] @ `settings > profiles > general > theme` set to "Dark"
+
+**Install a color palette**
+
+- [ ] go to https://iterm2colorschemes.com/ and choose colours palette
+- [ ] create a file on the desktop with ext `.itermcolors`
+- [ ] paste choosen color palette into file
+- [ ] double click file to load colours into presets
+- [ ] go to `settings > profiles > colours` and choose the preset
+
+**Choose a font**
+
+- [ ] @ `settings > profiles > text > font` set to "AnonymicePro Font"
+- [ ] set font size to "22"
+
+**Load new tabs and windows in previous location**
+
+- [ ] @ `Preferences > Profiles > General > Working Directory` set to "Reuse previous sessions directory"
+
+**Use opt + arrow to move across tokens in a text string**
+
+- [ ] @ `Preferences > Profiles > Keys > Key Mapping > Presets` set to "Natural Text Editing"
+
+
+### Warp
+
+#### Sign into Warp
+
+- [ ] First login to your Github account in the web browser
+- [ ] Login to Warp using your GitHub account (you'll be redirected to GitHub in the Browser)
+
+#### Configure Warp
+
+- [ ] Choose prompt
+- [ ] Choose theme
+- [ ] Choose the font (use the previously installed **Anonymice Pro Mono** font)
+- [ ] Set font size to "22"
+
+#### Open This readme in Warp
+
+You can open a markdown file in Warp, then you can execute any code blocks in the markdown by clicking on the code block. This will make moving through this readme much faster than cutting and pasting code into terminal.
+
+```shell
+cd ~/macos-setup && open README.md -a warp
+```
+
+
+## Setup text editors
+
+I write and edit text using three apps.  Apple Notes for everyday productivity. Typora for markdown. And VSCode for code.  Here's how I configure them.
 
 ### VSCode
 
 - [ ] Turn on settings sync (syncs settings with Github account)
 - [ ] Turn on "linked tag editing" @ settings > linked editing
 
-### Install extensions
+#### Install extensions
 
 If you synched settings for VSCode from a previous install this won't be necessary.
 
@@ -149,7 +210,23 @@ Consider:
 - [ ] Debugger for chrome (and also does Firefox)
 - [ ] rest client
 
+### Typora
 
+You can use `open -a typora xxx.md` to open the markdown file `xxx.md` in Typora from a command line. If Typora is your default editor for `.md` files, when `open xxx.md` would be enough.
+
+You can also add
+```
+alias tp="open -a typora"
+```
+in your `.zprofile` file, then you would be able to simply type `typora xxx.md` instead.
+
+(Requires Typora ≥ 1.1) If you want to use command line to not only open existing files, but also creating new files when target `.md` file does not exists, you could add
+```
+alias typora="/Applications/Typora.app/Contents/MacOS/Typora"
+```
+in your `.zprofile` or other configuration file.
+
+Then if you run `typora xxx.md` and `xxx.md` does not exists, Typora will pop up a dialog to ask you whether to create target file or cancel the operation.
 
 
 
@@ -299,71 +376,15 @@ scripts-prepend-node-path=true
 ```
 
 
-## Configure iTerm2
-If you are using iTerm2, now is the time to configure it to your liking...
-
-**Set theme**
-
-- [ ] @ `settings > profiles > general > theme` set to "Dark"
-
-**Install a color palette**
-
-- [ ] go to https://iterm2colorschemes.com/ and choose colours palette
-- [ ] create a file on the desktop with ext `.itermcolors`
-- [ ] paste choosen color palette into file
-- [ ] doouble click file to load colours into presets
-- [ ] go to `settings > profiles > colours` and choose the preset
-
-**Choose a font**
-
-- [ ] @ `settings > profiles > text > font` set to "AnonymicePro Font"
-- [ ] set font size to "22"
-
-**Load new tabs and windows in previous location**
-
-- [ ] @ `Preferences > Profiles > General > Working Directory` set to "Reuse previous sessions directory"
-
-**Use opt + arrow to move across tokens in a text string**
-
-- [ ] @ `Preferences > Profiles > Keys > Key Mapping > Presets` set to "Natural Text Editing"
 
 
 
 
-## Configure Firefox Developer
-
-Set preferences
-- [ ] Set as default browser
-- [ ] Setup url white list for cookies
-
-Install extensions
-- [ ] privacy badger
-- [ ] ublock origin
-
-## Configure Typora
-
-You can use `open -a typora xxx.md` to open the markdown file `xxx.md` in Typora from a command line. If Typora is your default editor for `.md` files, when `open xxx.md` would be enough.
-
-You can also add
-```
-alias tp="open -a typora"
-```
-in your `.zprofile` file, then you would be able to simply type `typora xxx.md` instead.
-
-(Requires Typora ≥ 1.1) If you want to use command line to not only open existing files, but also creating new files when target `.md` file does not exists, you could add
-```
-alias typora="/Applications/Typora.app/Contents/MacOS/Typora"
-```
-in your `.zprofile` or other configuration file.
-
-Then if you run `typora xxx.md` and `xxx.md` does not exists, Typora will pop up a dialog to ask you whether to create target file or cancel the operation.
-
-## Configure remaining apps installed with Homebrew
-
-Now is a good time to open each app installed via Homebrew.  Open each app and access preferences with `cmd + ,`  Authorize each app if necessary and set preferences.
 
 
-## Setup Git and GitHub
+
+
+## Git and GitHub
 
 We need to get up and running with:
 - Git
@@ -472,7 +493,7 @@ gh config set editor "nano --wait"
 - [ ] publish the new repo to GitHub
 
 
-## Install Python
+## Python
 
 [Python](https://www.python.org/)
 
@@ -531,43 +552,5 @@ conda --help
 [Uninstall Anaconda](https://docs.anaconda.com/free/anaconda/install/uninstall/)
 
 
-## iCloud
-
-If you are using a Mac, your most important data (contacts, messages, calendars, music, etc) is synched to iCloud. Get that data onto your new Mac
-
-- [ ] log-in to iCloud
-- [ ] turn on synching for all the data that is relevant to you
-- [ ] open all apple applications, click through introductory windows, and make sure they are synced with iCloud
-
-## MacOS preferences
-
-Get the Finder, Desktop and behaviour setup the way you like.
-
-- [ ] Simplify the dock
-- [ ] Simplify the menubar by moving widgets into settings and removing separate widgets
-- [ ] Setup finder windows the way you like
-- [ ] Turn on stage manager (or toggle under settings when you want it)
-- [ ] Show widgets on desktop if you want them
-- [ ] Set widget style monochrome
-- [ ] Turn on mission control
-- [ ] Turn on hot corners:
-  - [ ] TL - mission control
-  - [ ] TR - application window
-  - [ ] BL - screen saver
-  - [ ] BR - desktop
-
-## Install apps from app store.
-
-Download any apps you need from the App Store. Click on your account in the store to see a list of your previous purchases.
-
-- [ ] 1Password
-  - [ ] Open and connect to 1password database
-- [ ] Authy
-  - [ ] Open and connect to Authy database
-- [ ] Numbers
-- [ ] Affinity Designer
-- [ ] Magnet
-- [ ] Transmit
-  - [ ] Download from Panic (not the app store)
 
 
